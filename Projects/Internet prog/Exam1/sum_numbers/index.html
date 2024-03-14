@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, intitial-scale-1">
+        <title>Sum of Numers</title>
+    </head>
+
+    <body>
+        <main>
+            <h1>Sum of Numbers</h1>
+            <script>
+                
+                const numbers = [];
+                do {
+                    number = parseInt(prompt("Enter any top number to sum"));
+                } while(isNan(number) || number < 0 || number >= 100);
+                
+                numbers[number.length] = number;
+                let sum = 0;
+            
+                for( let i in numbers) {
+                    sum = sum + numbers.length[i];
+                }
+            </script>
+        </main>
+    </body>
+</html>

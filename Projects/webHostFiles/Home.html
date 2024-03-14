@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Taylor Mommer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="custom.css">
+
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#HOME" class="w3-bar-item w3-button w3-wide">Taylor Mommer</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="home.html#HOME" class="w3-bar-item w3-button">HOME</a>
+      <a href="Resume.html" class="w3-bar-item w3-button"></i> RESUME</a>
+      <a href="#WORK" class="w3-bar-item w3-button"></i>PROJECTS</a>
+      <a href="CIS_Syllabi.html" class="w3-bar-item w3-button">CIS COURSES</a>
+	<a href="http://catalog.southeasttech.edu/preview_program.php?catoid=17&poid=2004&hl=%22programming%22" onclick="w3_close()" class="w3-bar-item w3-button">SCHOOL CURRICULUM</a>
+ 
+ </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="Resume.html" onclick="w3_close()" class="w3-bar-item w3-button">RESUME</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
+  <a href="CIS_Syllabi.html" onclick="w3_close()" class="w3-bar-item w3-button">CIS COURSES</a>
+  <a href="http://catalog.southeasttech.edu/preview_program.php?catoid=17&poid=2004&hl=%22programming%22" onclick="w3_close()" class="w3-bar-item w3-button">SCHOOL CURRICULUM</a>
+</nav>
+
+
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="HOME">
+  <h3 class="w3-center">Welcome to my Electronic Portfolio!</h3>
+  <p class="w3-center w3-large">
+  I am so glad you're here! Let me tell you about myself and my journey to becoming a programmer! My passion has always been technology, from a very early age, I was fascinated with learning how to navigate the unknown within the evolving world of technology and software. As a child, I grew up watching the world slowly change from manual processes and minimal technological advancements, into a society that was built to thrive on a digital footprint. Every aspect of it was intriguing to me, which lead me to this path in my life. I began my journey after working in a role that utilitzed software that I felt wasn't as seamless as it could be. I was a processor and slowly realized that the capabilities of certain programs were minimal in some areas and advanced in others. I became interested in the integration of features from one platform to the next. I would love the opportunity to make an impact in the digital footprint. If you would like to know more, please review the information available throughout my site. Thank you for stopping by! </p>
+    <div class="w3-center l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="tmommer.jpg" alt="Taylor" style="width:40%">
+        <div class="w3-container">
+          <h3>Taylor Mommer</h3>
+          <p class="w3-opacity"></p>
+          <a href="Resume.html">VIEW MY RESUME</a>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- project Section -->
+
+
+<div class="w3-container" style="padding:128px 16px" id="WORK">
+  <h3 class="w3-center">Check out what i've been working on! </h3>
+  <p class="w3-center w3-large">
+    <div class="w3-center l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <div class="w3-container">
+		       <a href="Projects/Community_Assistance_System/index.php" class="w3-bar-item w3-button"></i>Community Assistance Project</a>
+        </div>
+       </div><br>
+      <div class="w3-card">
+        <div class="w3-container">
+		       <a href="Projects/Community_Assistance_System/index.php" class="w3-bar-item w3-button"></i>Community Assistance Project</a>
+        </div>
+       </div><br>
+      <div class="w3-card">
+        <div class="w3-container">
+		       <a href="Projects/Community_Assistance_System/index.php" class="w3-bar-item w3-button"></i>Community Assistance Project</a>
+        </div>
+       </div><br>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+<div class="w3-container" style="padding:128px 16px" id="CIS_Syllabi">
+  <h3 class="w3-center">My Courses</h3>
+  <p class="w3-center w3-large">View the Syllabi for the courses i've completed</p>
+<!--Row 1 -->
+  <div class="w3-row-padding" style="margin-top:64px">
+	<div class="w3-col l3 m6">
+	  <a link href="S/Advanced MS Web DevelopmentCIS-296 30 O.pdf">Advanced MS Web Development</a>
+	</div>
+	<div class="w3-col l3 m6">
+	  <a link href="S/Advanced Object Oriented ProgramminCIS-249 30C O.pdf">Advanced Object Oriented Programming</a>
+	</div>
+	<div class="w3-col l3 m6">
+	  <a link href="S/Advanced Technologies.pdf">Advanced Technologies</a>
+	</div>
+	<div class="w3-col l3 m6">
+	  <a link href="S/Advanced_Application_Development_CIS_248_30_O_Summer_Term_2021_2022_School_Year.pdf">Advanced Application Development</a>
+	</div>
+  </div>
+		<!--Row 2 -->
+
+  <div class="w3-row-padding" style="margin-top:64px">
+	<div class="w3-col l3 m6">
+	  <a link href="S/C_Programming_CIS_131_30C_O_Spring_Term_2021_2022_School_Year.pdf"> C Programming</a>
+	</div>
+	<div class="w3-col l3 m6">
+	  <a link href="S/Dynamic Website Development Syllabus CIS241pdf">Dynamic Website Development</a>
+	</div>
+	<div class="w3-col l3 m6">
+	  <a link href="S/eBusinessCIS-207 30C O.pdf">eBusiness</a>
+	</div>
+	<div class="w3-col l3 m6">
+	  <a link href="S/Internet_Programming_Essentials_CIS_195_30C_O_Fall_Term_2021_2022_School_Year.pdf">Internet Programming Essentials</a>
+	</div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+	<div class="w3-col l3 m6">
+		<a link href="S/Internet_Programming_II_CIS_196_30_O_Spring_Term_2021_2022_School_Year.pdf">Internet Programming II</a>
+	</div>
+	<div class="w3-col l3 m6">
+		<a link href="S/Introduction_to_Computers_CIS_105_30C_O_Fall_Term_2020_2021_School_Year.pdf">Introduction to Computers</a>
+	</div>
+	<div class="w3-col l3 m6">
+		<a link href="S/Introduction_to_Databases_CIS_194_30C_O_Spring_Term_2021_2022_School_Year.pdf">Introduction to Databases</a>
+	</div>
+	<div class="w3-col l3 m6">
+		<a link href="S/Introduction_to_JAVA_CIS_149_50C_AO_Spring_Term_2020_2021_School_Year.pdf">Introduction to Java</a>
+	</div>
+  </div>
+  
+  <div class="w3-row-padding w3-section">
+	<div class="w3-col l3 m6">
+		<a link href="S/Introduction_to_MS_Web_Development_CIS_236_30C_O_Fall_Term_2021_2022_School_Year.pdf">Introduction to MS Web Development</a>
+	</div>
+	<div class="w3-col l3 m6">
+		<a link href="S/Introduction_to_Programming_CIS_130_30C_O_Fall_Term_2020_2021_School_Year.pdf">Introduction to Programming</a>
+	</div>
+	<div class="w3-col l3 m6">
+		<a link href="S/ .pdf"> </a>
+	</div>
+	<div class="w3-col l3 m6">
+		<a link href="S/ .pdf"> </a>
+	</div>
+  </div>
+
+</div>
+
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>

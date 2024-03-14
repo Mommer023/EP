@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, intitial-scale-1">
+        <title>Sum of Numers</title>
+    </head>
+
+    <body>
+        <main>
+            <h1>Grade Converter</h1>
+            <script>
+                const grades= [];
+                do {
+                    let grade= o;
+                    grade = parseInt(prompt("Enter a number grade from 0 through 100\n" +
+                        "Or enter 999 to end entries"));
+                        if (grade > 0 && grade >= 100 ) {
+                            grades[grade.length] = grade;
+                        }
+                        else if (grade <= 0 && grade < 100) {
+                            alert("Grade must be a valid number 0 through 100");
+                        }
+
+                } while(grades != 999)
+                
+                for(grades[i] in grades){
+                    
+                }
+            </script>
+        </main>
+    </body>
+</html>

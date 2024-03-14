@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tuxedo Cat Coffee</title>
+    <link type="text/css" rel="stylesheet" href="cafe.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Tuxedo Cat Coffee"/>
+    </header>
+    <main>
+        <form id="order_form" name="order_form" action="checkout.html" method="get">
+            <section id="menu">
+            	<h2>Menu</h2>
+            	<p>Click an item to add it to your order.</p>
+            	<ul>
+            		<li><a href="#"><img id="images/frappucino_info.jpg" src="images/frappucino.jpg" alt="frappucino"/></a></li>
+            		<li><a href="#"><img id="images/burger_info.jpg" src="images/burger.jpg" alt="burger"/></a></li>
+            		<li><a href="#"><img id="images/panini_info.jpg" src="images/panini.jpg" alt="panini"/></a></li>
+            		<li><a href="#"><img id="images/es_sandwich_info.jpg" src="images/es_sandwich.jpg" alt="egg salad sandwich"/></a></li>
+            		<li><a href="#"><img id="images/biscotti_info.jpg" src="images/biscotti.jpg" alt="biscotti"/></a></li>
+            		<li><a href="#"><img id="images/coffee_cake_info.jpg" src="images/coffee_cake.jpg" alt="coffee cake"/></a></li>
+            	</ul>
+            </section>
+
+            <section>
+            	<h2>Your Order</h2>
+            	<section>
+            		<select id="order" name="order" size="6">
+            		</select>
+            		<p id="total">&nbsp;</p>            		
+           		</section>
+            	<section id="buttons">
+           			<input type="button" name="place_order" id="place_order" value="Place Order">
+           			<input type="button" name="clear_order" id="clear_order" value="Clear Order">				            		
+            	</section>
+            </section>   
+
+        </form>
+    </main> 
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="cafe.js"></script>
+</body>
+</html>

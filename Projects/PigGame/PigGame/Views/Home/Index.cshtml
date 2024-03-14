@@ -1,0 +1,76 @@
+﻿@model Game
+
+@{
+    ViewData["title"] = "Pig";
+
+}
+<div class="col-7">
+    <ul class="list-group">
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col">
+                    <label class="mr-1">@Model.Player1.Name</label>
+                    <label>@Model.Player1.Score</label>
+                </div>
+                <div class="col">
+                    <form asp-action="NewGame" method="post">
+                        <input type="submit" value="New Game" class="btn btn-outline-dark" float-right/>
+                    </form>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col">
+                    <label class="mr-1">@Model.Player2.Name</label>
+                    <label>@Model.Player2.Score</label>
+                </div>
+            </div>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col mb-3">
+                    <label>@Model.CurrentPlayer's Turn </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                   <form asp-action="Roll" method="post">
+                       <button type="submit" class="btn btn-outline-dark mr-2">Roll</button>
+                   </form>
+                    <form asp-action="Hold" method="post">
+                        <button type="submit" class="btn btn-outline-dark mr-2">Hold</button>
+                    </form>
+                    <label class="mr-1">Die:</label>
+                    <label class="mr-2">@Model.GameRoll</label>
+ 
+                    <label class="mr-1">Total:</label>
+                    <label class="mr-2">@Model.TurnScore</label>
+
+                </div>
+            </div>
+
+        </li>
+    </ul>
+</div>
+<div class="col">
+    <ul class="list-group">
+        <li class="list-group-item">
+            First Player to 20 win
+        </li>
+        <li class="list-group-item">
+            Players take turns rolling the die.
+        </li>
+        <li class="list-group-item">
+            Turn ends when player rolls a 1 or chooses to hold.
+        </li>
+        <li class="list-group-item">
+            If player rolls a 1, they loose all points earned during that turn.
+        </li>
+        <li class="list-group-item">
+            If player holds, points earned during that turn are added to their total.
+        </li>
+
+         
+    </ul>
+</div>

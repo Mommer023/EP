@@ -1,0 +1,16 @@
+<<<<<<< HEAD
+To run the application:
+
+Start the terminal (be sure you have the folder open in th VS code and use the terminal in VS so you do not have to move to the source file location. )
+
+In Terminal enter = "go run main.go" 
+
+=======
+To run the application:
+
+Start the terminal (be sure you have the folder open in th VS code and use the terminal in VS so you do not have to move to the source file location. )
+
+In Terminal enter = "go run main.go" 
+
+>>>>>>> refs/remotes/origin/main
+Open your browser and go to the following url:    http://localhost:8001/index 

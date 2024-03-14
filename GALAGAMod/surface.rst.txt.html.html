@@ -1,0 +1,942 @@
+<html>
+<head>
+<title>surface.rst.txt.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #e8bf6a;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #bababa;}
+.s3 { color: #a5c261;}
+.s4 { color: #6d9cbe;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+surface.rst.txt.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;html&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+<span class="s0">&lt;title&gt;</span><span class="s1">surface.rst.txt</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;meta </span><span class="s2">http-equiv</span><span class="s3">=&quot;Content-Type&quot; </span><span class="s2">content</span><span class="s3">=&quot;text/html; charset=utf-8&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;style </span><span class="s2">type</span><span class="s3">=&quot;text/css&quot;</span><span class="s0">&gt;</span>
+<span class="s1">.s0 { color: #a9b7c6;}</span>
+<span class="s0">&lt;/style&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body </span><span class="s2">bgcolor</span><span class="s3">=&quot;#2b2b2b&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;table </span><span class="s2">CELLSPACING</span><span class="s3">=0 </span><span class="s2">CELLPADDING</span><span class="s3">=5 </span><span class="s2">COLS</span><span class="s3">=1 </span><span class="s2">WIDTH</span><span class="s3">=&quot;100%&quot; </span><span class="s2">BGCOLOR</span><span class="s3">=&quot;#606060&quot; </span><span class="s0">&gt;</span>
+<span class="s0">&lt;tr&gt;&lt;td&gt;&lt;center&gt;</span>
+<span class="s0">&lt;font </span><span class="s2">face</span><span class="s3">=&quot;Arial, Helvetica&quot; </span><span class="s2">color</span><span class="s3">=&quot;#000000&quot;</span><span class="s0">&gt;</span>
+<span class="s1">surface.rst.txt</span><span class="s0">&lt;/font&gt;</span>
+<span class="s0">&lt;/center&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</span>
+<span class="s0">&lt;pre&gt;&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. include:: common.txt</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:mod:`pygame.Surface`</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">=====================</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. currentmodule:: pygame</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. class:: Surface</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`pygame object for representing images`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`Surface((width, height), flags=0, depth=0, masks=None) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`Surface((width, height), flags=0, Surface) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">A pygame Surface is used to represent any image. The Surface has a fixed</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">resolution and pixel format. Surfaces with 8-bit pixels use a color palette</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">to map to 24-bit color.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Call :meth:`pygame.Surface()` to create a new image object. The Surface will</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">be cleared to all black. The only required arguments are the sizes. With no</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">additional arguments, the Surface will be created in a format that best</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">matches the display Surface.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The pixel format can be controlled by passing the bit depth or an existing</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surface. The flags argument is a bitmask of additional features for the</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">surface. You can pass any combination of these flags:</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">::</span><span class="s0">&lt;/span&gt;</span>
+
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">HWSURFACE    (obsolete in pygame 2) creates the image in video memory</span><span class="s0">&lt;/span&gt;</span>
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">SRCALPHA     the pixel format will include a per-pixel alpha</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Both flags are only a request, and may not be possible for all displays and</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">formats.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Advance users can combine a set of bitmasks with a depth value. The masks</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">are a set of 4 integers representing which bits in a pixel will represent</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">each color. Normal Surfaces should not require the masks argument.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surfaces can have many extra attributes like alpha planes, colorkeys, source</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">rectangle clipping. These functions mainly effect how the Surface is blitted</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">to other Surfaces. The blit routines will attempt to use hardware</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">acceleration when possible, otherwise they will use highly optimized</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">software blitting methods.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">There are three types of transparency supported in pygame: colorkeys,</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">surface alphas, and pixel alphas. Surface alphas can be mixed with</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">colorkeys, but an image with per pixel alphas cannot use the other modes.</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Colorkey transparency makes a single color value transparent. Any pixels</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">matching the colorkey will not be drawn. The surface alpha value is a single</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">value that changes the transparency for the entire image. A surface alpha of</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">255 is opaque, and a value of 0 is completely transparent.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Per pixel alphas are different because they store a transparency value for</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">every pixel. This allows for the most precise transparency effects, but it</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">also the slowest. Per pixel alphas cannot be mixed with surface alpha and</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">colorkeys.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">There is support for pixel access for the Surfaces. Pixel access on hardware</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">surfaces is slow and not recommended. Pixels can be accessed using the</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:meth:`get_at()` and :meth:`set_at()` functions. These methods are fine for</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">simple access, but will be considerably slow when doing of pixel work with</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">them. If you plan on doing a lot of pixel level work, it is recommended to</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">use a :class:`pygame.PixelArray`, which gives an array like view of the</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">surface. For involved mathematical manipulations try the</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:mod:`pygame.surfarray` module (It's quite quick, but requires NumPy.)</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Any functions that directly access a surface's pixel data will need that</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">surface to be lock()'ed. These functions can :meth:`lock()` and</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:meth:`unlock()` the surfaces themselves without assistance. But, if a</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">function will be called many times, there will be a lot of overhead for</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">multiple locking and unlocking of the surface. It is best to lock the</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">surface manually before making the function call many times, and then</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">unlocking when you are finished. All functions that need a locked surface</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">will say so in their docs. Remember to leave the Surface locked only while</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">necessary.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surface pixels are stored internally as a single number that has all the</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">colors encoded into it. Use the :meth:`map_rgb()` and</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:meth:`unmap_rgb()` to convert between individual red, green, and blue</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">values into a packed integer for that Surface.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surfaces can also reference sections of other Surfaces. These are created</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">with the :meth:`subsurface()` method. Any change to either Surface will</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">effect the other.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Each Surface contains a clipping area. By default the clip area covers the</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">entire Surface. If it is changed, all drawing operations will only effect</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">the smaller area.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: blit</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`draw one image onto another`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`blit(source, dest, area=None, special_flags=0) -</span><span class="s4">&amp;gt; </span><span class="s1">Rect`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Draws a source Surface onto this Surface. The draw can be positioned with</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">the dest argument. The dest argument can either be a pair of coordinates representing the position of</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">the upper left corner of the blit or a Rect, where the upper left corner of the rectangle will be used as the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">position for the blit. The size of the destination rectangle does not</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">effect the blit.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">An optional area rectangle can be passed as well. This represents a</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">smaller portion of the source Surface to draw.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.8</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Optional ``special_flags``: ``BLEND_ADD``, ``BLEND_SUB``,</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``BLEND_MULT``, ``BLEND_MIN``, ``BLEND_MAX``.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.8.1</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Optional ``special_flags``: ``BLEND_RGBA_ADD``, ``BLEND_RGBA_SUB``,</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``BLEND_RGBA_MULT``, ``BLEND_RGBA_MIN``, ``BLEND_RGBA_MAX``</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``BLEND_RGB_ADD``, ``BLEND_RGB_SUB``, ``BLEND_RGB_MULT``,</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``BLEND_RGB_MIN``, ``BLEND_RGB_MAX``.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.9.2</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Optional ``special_flags``: ``BLEND_PREMULTIPLIED``</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 2.0.0</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Optional ``special_flags``:  ``BLEND_ALPHA_SDL2`` - Uses the SDL2 blitter for alpha blending,</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">this gives different results than the default blitter, which is modelled after SDL1, due to</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">different approximations used for the alpha blending formula. The SDL2 blitter also supports</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">RLE on alpha blended surfaces which the pygame one does not.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The return rectangle is the area of the affected pixels, excluding any</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pixels outside the destination Surface, or outside the clipping area.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Pixel alphas will be ignored when blitting to an 8 bit Surface.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">For a surface with colorkey or blanket alpha, a blit to self may give</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">slightly different colors than a non self-blit.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.blit ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: blits</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`draw many images onto another`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`blits(blit_sequence=((source, dest), ...), doreturn=1) -</span><span class="s4">&amp;gt; </span><span class="s1">[Rect, ...] or None`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`blits(((source, dest, area), ...)) -</span><span class="s4">&amp;gt; </span><span class="s1">[Rect, ...]`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`blits(((source, dest, area, special_flags), ...)) -</span><span class="s4">&amp;gt; </span><span class="s1">[Rect, ...]`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Draws many surfaces onto this Surface. It takes a sequence as input,</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">with each of the elements corresponding to the ones of :meth:`blit()`.</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">It needs at minimum a sequence of (source, dest).</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:param blit_sequence: a sequence of surfaces and arguments to blit them,</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">they correspond to the :meth:`blit()` arguments</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:param doreturn: if ``True``, return a list of rects of the areas changed,</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">otherwise return ``None``</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:returns: a list of rects of the areas changed if ``doreturn`` is</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``True``, otherwise ``None``</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:rtype: list or None</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">New in pygame 1.9.4.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.blits ##</span><span class="s0">&lt;/span&gt;</span>
+
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: convert</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`change the pixel format of an image`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`convert(Surface=None) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`convert(depth, flags=0) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`convert(masks, flags=0) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Creates a new copy of the Surface with the pixel format changed. The new</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pixel format can be determined from another existing Surface. Otherwise</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">depth, flags, and masks arguments can be used, similar to the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:meth:`pygame.Surface()` call.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">If no arguments are passed the new Surface will have the same pixel</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">format as the display Surface. This is always the fastest format for</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">blitting. It is a good idea to convert all Surfaces before they are</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">blitted many times.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The converted Surface will have no pixel alphas. They will be stripped if</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">the original had them. See :meth:`convert_alpha()` for preserving or</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">creating per-pixel alphas.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The new copy will have the same class as the copied surface. This lets</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">as Surface subclass inherit this method without the need to override,</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">unless subclass specific instance attributes also need copying.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.convert ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: convert_alpha</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`change the pixel format of an image including per pixel alphas`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`convert_alpha(Surface) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`convert_alpha() -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Creates a new copy of the surface with the desired pixel format. The new</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">surface will be in a format suited for quick blitting to the given format</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">with per pixel alpha. If no surface is given, the new surface will be</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">optimized for blitting to the current display.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Unlike the :meth:`convert()` method, the pixel format for the new</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">image will not be exactly the same as the requested source, but it will</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">be optimized for fast alpha blitting to the destination.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">As with :meth:`convert()` the returned surface has the same class as</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">the converted surface.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.convert_alpha ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: copy</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`create a new copy of a Surface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`copy() -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Makes a duplicate copy of a Surface. The new surface will have the same</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pixel formats, color palettes, transparency settings, and class as the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">original. If a Surface subclass also needs to copy any instance specific</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">attributes then it should override ``copy()``.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.copy ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: fill</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`fill Surface with a solid color`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`fill(color, rect=None, special_flags=0) -</span><span class="s4">&amp;gt; </span><span class="s1">Rect`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Fill the Surface with a solid color. If no rect argument is given the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">entire Surface will be filled. The rect argument will limit the fill to a</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">specific area. The fill will also be contained by the Surface clip area.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The color argument can be either a ``RGB`` sequence, a ``RGBA`` sequence</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">or a mapped color index. If using ``RGBA``, the Alpha (A part of</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``RGBA``) is ignored unless the surface uses per pixel alpha (Surface has</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">the ``SRCALPHA`` flag).</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.8</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Optional ``special_flags``: ``BLEND_ADD``, ``BLEND_SUB``,</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``BLEND_MULT``, ``BLEND_MIN``, ``BLEND_MAX``.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.8.1</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Optional ``special_flags``: ``BLEND_RGBA_ADD``, ``BLEND_RGBA_SUB``,</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``BLEND_RGBA_MULT``, ``BLEND_RGBA_MIN``, ``BLEND_RGBA_MAX``</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``BLEND_RGB_ADD``, ``BLEND_RGB_SUB``, ``BLEND_RGB_MULT``,</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``BLEND_RGB_MIN``, ``BLEND_RGB_MAX``.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This will return the affected Surface area.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.fill ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: scroll</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Shift the surface image in place`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`scroll(dx=0, dy=0) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Move the image by dx pixels right and dy pixels down. dx and dy may be</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">negative for left and up scrolls respectively. Areas of the surface that</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">are not overwritten retain their original pixel values. Scrolling is</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">contained by the Surface clip area. It is safe to have dx and dy values</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">that exceed the surface size.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.9</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.scroll ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: set_colorkey</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Set the transparent colorkey`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_colorkey(Color, flags=0) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_colorkey(None) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Set the current color key for the Surface. When blitting this Surface</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">onto a destination, any pixels that have the same color as the colorkey</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">will be transparent. The color can be an ``RGB`` color or a mapped color</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">integer. If ``None`` is passed, the colorkey will be unset.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The colorkey will be ignored if the Surface is formatted to use per pixel</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">alpha values. The colorkey can be mixed with the full Surface alpha</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">value.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The optional flags argument can be set to ``pygame.RLEACCEL`` to provide</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">better performance on non accelerated displays. An ``RLEACCEL`` Surface</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">will be slower to modify, but quicker to blit as a source.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.set_colorkey ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_colorkey</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Get the current transparent colorkey`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_colorkey() -</span><span class="s4">&amp;gt; </span><span class="s1">RGB or None`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Return the current colorkey value for the Surface. If the colorkey is not</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">set then ``None`` is returned.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_colorkey ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: set_alpha</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`set the alpha value for the full Surface image`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_alpha(value, flags=0) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_alpha(None) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Set the current alpha value for the Surface. When blitting this Surface</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">onto a destination, the pixels will be drawn slightly transparent. The</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">alpha value is an integer from 0 to 255, 0 is fully transparent and 255</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">is fully opaque. If ``None`` is passed for the alpha value, then alpha</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">blending will be disabled, including per-pixel alpha.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This value is different than the per pixel Surface alpha. For a surface</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">with per pixel alpha, blanket alpha is ignored and ``None`` is returned.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionchanged:: 2.0 per-surface alpha can be combined with per-pixel</span><span class="s0">&lt;/span&gt;</span>
+                          <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">alpha.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The optional flags argument can be set to ``pygame.RLEACCEL`` to provide</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">better performance on non accelerated displays. An ``RLEACCEL`` Surface</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">will be slower to modify, but quicker to blit as a source.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.set_alpha ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_alpha</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`get the current Surface transparency value`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_alpha() -</span><span class="s4">&amp;gt; </span><span class="s1">int_value`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Return the current alpha value for the Surface.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_alpha ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: lock</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`lock the Surface memory for pixel access`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`lock() -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Lock the pixel data of a Surface for access. On accelerated Surfaces, the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pixel data may be stored in volatile video memory or nonlinear compressed</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">forms. When a Surface is locked the pixel memory becomes available to</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">access by regular software. Code that reads or writes pixel values will</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">need the Surface to be locked.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surfaces should not remain locked for more than necessary. A locked</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surface can often not be displayed or managed by pygame.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Not all Surfaces require locking. The :meth:`mustlock()` method can</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">determine if it is actually required. There is no performance penalty for</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">locking and unlocking a Surface that does not need it.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">All pygame functions will automatically lock and unlock the Surface data</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">as needed. If a section of code is going to make calls that will</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">repeatedly lock and unlock the Surface many times, it can be helpful to</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">wrap the block inside a lock and unlock pair.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">It is safe to nest locking and unlocking calls. The surface will only be</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">unlocked after the final lock is released.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.lock ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: unlock</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`unlock the Surface memory from pixel access`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`unlock() -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Unlock the Surface pixel data after it has been locked. The unlocked</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surface can once again be drawn and managed by pygame. See the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:meth:`lock()` documentation for more details.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">All pygame functions will automatically lock and unlock the Surface data</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">as needed. If a section of code is going to make calls that will</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">repeatedly lock and unlock the Surface many times, it can be helpful to</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">wrap the block inside a lock and unlock pair.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">It is safe to nest locking and unlocking calls. The surface will only be</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">unlocked after the final lock is released.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.unlock ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: mustlock</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`test if the Surface requires locking`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`mustlock() -</span><span class="s4">&amp;gt; </span><span class="s1">bool`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returns ``True`` if the Surface is required to be locked to access pixel</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">data. Usually pure software Surfaces do not require locking. This method</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">is rarely needed, since it is safe and quickest to just lock all Surfaces</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">as needed.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">All pygame functions will automatically lock and unlock the Surface data</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">as needed. If a section of code is going to make calls that will</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">repeatedly lock and unlock the Surface many times, it can be helpful to</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">wrap the block inside a lock and unlock pair.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.mustlock ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_locked</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`test if the Surface is current locked`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_locked() -</span><span class="s4">&amp;gt; </span><span class="s1">bool`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returns ``True`` when the Surface is locked. It doesn't matter how many</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">times the Surface is locked.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_locked ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_locks</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets the locks for the Surface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_locks() -</span><span class="s4">&amp;gt; </span><span class="s1">tuple`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returns the currently existing locks for the Surface.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_locks ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_at</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`get the color value at a single pixel`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_at((x, y)) -</span><span class="s4">&amp;gt; </span><span class="s1">Color`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Return a copy of the ``RGBA`` Color value at the given pixel. If the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surface has no per pixel alpha, then the alpha value will always be 255</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">(opaque). If the pixel position is outside the area of the Surface an</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``IndexError`` exception will be raised.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Getting and setting pixels one at a time is generally too slow to be used</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">in a game or realtime situation. It is better to use methods which</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">operate on many pixels at a time like with the blit, fill and draw</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">methods - or by using :mod:`pygame.surfarray`/:mod:`pygame.PixelArray`.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function will temporarily lock and unlock the Surface as needed.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.9</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returning a Color instead of tuple. Use ``tuple(surf.get_at((x,y)))``</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">if you want a tuple, and not a Color. This should only matter if</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">you want to use the color as a key in a dict.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_at ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: set_at</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`set the color value for a single pixel`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_at((x, y), Color) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Set the ``RGBA`` or mapped integer color value for a single pixel. If the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surface does not have per pixel alphas, the alpha value is ignored.</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Setting pixels outside the Surface area or outside the Surface clipping</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">will have no effect.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Getting and setting pixels one at a time is generally too slow to be used</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">in a game or realtime situation.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function will temporarily lock and unlock the Surface as needed.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. note:: If the surface is palettized, the pixel color will be set to the</span><span class="s0">&lt;/span&gt;</span>
+                <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">most similar color in the palette.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.set_at ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_at_mapped</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`get the mapped color value at a single pixel`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_at_mapped((x, y)) -</span><span class="s4">&amp;gt; </span><span class="s1">Color`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Return the integer value of the given pixel. If the pixel position is</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">outside the area of the Surface an ``IndexError`` exception will be</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">raised.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This method is intended for pygame unit testing. It unlikely has any use</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">in an application.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function will temporarily lock and unlock the Surface as needed.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.9.2</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_at_mapped ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_palette</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`get the color index palette for an 8-bit Surface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_palette() -</span><span class="s4">&amp;gt; </span><span class="s1">[RGB, RGB, RGB, ...]`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Return a list of up to 256 color elements that represent the indexed</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">colors used in an 8-bit Surface. The returned list is a copy of the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">palette, and changes will have no effect on the Surface.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returning a list of ``Color(with length 3)`` instances instead of tuples.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.9</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_palette ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_palette_at</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`get the color for a single entry in a palette`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_palette_at(index) -</span><span class="s4">&amp;gt; </span><span class="s1">RGB`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returns the red, green, and blue color values for a single index in a</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surface palette. The index should be a value from 0 to 255.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.9</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returning ``Color(with length 3)`` instance instead of a tuple.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_palette_at ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: set_palette</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`set the color palette for an 8-bit Surface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_palette([RGB, RGB, RGB, ...]) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Set the full palette for an 8-bit Surface. This will replace the colors in</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">the existing palette. A partial palette can be passed and only the first</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">colors in the original palette will be changed.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function has no effect on a Surface with more than 8-bits per pixel.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.set_palette ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: set_palette_at</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`set the color for a single index in an 8-bit Surface palette`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_palette_at(index, RGB) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Set the palette value for a single entry in a Surface palette. The index</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">should be a value from 0 to 255.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function has no effect on a Surface with more than 8-bits per pixel.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.set_palette_at ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: map_rgb</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`convert a color into a mapped color value`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`map_rgb(Color) -</span><span class="s4">&amp;gt; </span><span class="s1">mapped_int`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Convert an ``RGBA`` color into the mapped integer value for this Surface.</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The returned integer will contain no more bits than the bit depth of the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surface. Mapped color values are not often used inside pygame, but can be</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">passed to most functions that require a Surface and a color.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">See the Surface object documentation for more information about colors</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">and pixel formats.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.map_rgb ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: unmap_rgb</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`convert a mapped integer color value into a Color`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`unmap_rgb(mapped_int) -</span><span class="s4">&amp;gt; </span><span class="s1">Color`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Convert an mapped integer color into the ``RGB`` color components for</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">this Surface. Mapped color values are not often used inside pygame, but</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">can be passed to most functions that require a Surface and a color.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">See the Surface object documentation for more information about colors</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">and pixel formats.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.unmap_rgb ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: set_clip</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`set the current clipping area of the Surface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_clip(rect) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_clip(None) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Each Surface has an active clipping area. This is a rectangle that</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">represents the only pixels on the Surface that can be modified. If</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``None`` is passed for the rectangle the full Surface will be available</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">for changes.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The clipping area is always restricted to the area of the Surface itself.</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">If the clip rectangle is too large it will be shrunk to fit inside the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surface.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.set_clip ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_clip</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`get the current clipping area of the Surface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_clip() -</span><span class="s4">&amp;gt; </span><span class="s1">Rect`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Return a rectangle of the current clipping area. The Surface will always</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">return a valid rectangle that will never be outside the bounds of the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">image. If the Surface has had ``None`` set for the clipping area, the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surface will return a rectangle with the full area of the Surface.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_clip ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: subsurface</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`create a new surface that references its parent`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`subsurface(Rect) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returns a new Surface that shares its pixels with its new parent. The new</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surface is considered a child of the original. Modifications to either</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surface pixels will effect each other. Surface information like clipping</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">area and color keys are unique to each Surface.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The new Surface will inherit the palette, color key, and alpha settings</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">from its parent.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">It is possible to have any number of subsurfaces and subsubsurfaces on</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">the parent. It is also possible to subsurface the display Surface if the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">display mode is not hardware accelerated.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">See :meth:`get_offset()` and :meth:`get_parent()` to learn more</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">about the state of a subsurface.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">A subsurface will have the same class as the parent surface.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.subsurface ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_parent</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`find the parent of a subsurface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_parent() -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returns the parent Surface of a subsurface. If this is not a subsurface</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">then ``None`` will be returned.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_parent ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_abs_parent</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`find the top level parent of a subsurface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_abs_parent() -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returns the parent Surface of a subsurface. If this is not a subsurface</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">then this surface will be returned.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_abs_parent ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_offset</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`find the position of a child subsurface inside a parent`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_offset() -</span><span class="s4">&amp;gt; </span><span class="s1">(x, y)`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Get the offset position of a child subsurface inside of a parent. If the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surface is not a subsurface this will return (0, 0).</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_offset ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_abs_offset</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`find the absolute position of a child subsurface inside its top level parent`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_abs_offset() -</span><span class="s4">&amp;gt; </span><span class="s1">(x, y)`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Get the offset position of a child subsurface inside of its top level</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">parent Surface. If the Surface is not a subsurface this will return (0,</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">0).</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_abs_offset ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_size</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`get the dimensions of the Surface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_size() -</span><span class="s4">&amp;gt; </span><span class="s1">(width, height)`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Return the width and height of the Surface in pixels.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_size ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_width</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`get the width of the Surface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_width() -</span><span class="s4">&amp;gt; </span><span class="s1">width`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Return the width of the Surface in pixels.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_width ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_height</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`get the height of the Surface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_height() -</span><span class="s4">&amp;gt; </span><span class="s1">height`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Return the height of the Surface in pixels.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_height ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_rect</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`get the rectangular area of the Surface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_rect(\**kwargs) -</span><span class="s4">&amp;gt; </span><span class="s1">Rect`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returns a new rectangle covering the entire surface. This rectangle will</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">always start at (0, 0) with a width and height the same size as the image.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">You can pass keyword argument values to this function. These named values</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">will be applied to the attributes of the Rect before it is returned. An</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">example would be ``mysurf.get_rect(center=(100, 100))`` to create a</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">rectangle for the Surface centered at a given position.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_rect ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_bitsize</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`get the bit depth of the Surface pixel format`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_bitsize() -</span><span class="s4">&amp;gt; </span><span class="s1">int`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returns the number of bits used to represent each pixel. This value may</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">not exactly fill the number of bytes used per pixel. For example a 15 bit</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surface still requires a full 2 bytes.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_bitsize ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_bytesize</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`get the bytes used per Surface pixel`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_bytesize() -</span><span class="s4">&amp;gt; </span><span class="s1">int`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Return the number of bytes used per pixel.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_bytesize ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_flags</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`get the additional flags used for the Surface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_flags() -</span><span class="s4">&amp;gt; </span><span class="s1">int`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returns a set of current Surface features. Each feature is a bit in the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">flags bitmask. Typical flags are ``RLEACCEL``, ``SRCALPHA``, and</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``SRCCOLORKEY``.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Here is a more complete list of flags. A full list can be found in</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``SDL_video.h``</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">::</span><span class="s0">&lt;/span&gt;</span>
+
+        <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">SWSURFACE      0x00000000    # Surface is in system memory</span><span class="s0">&lt;/span&gt;</span>
+        <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">HWSURFACE      0x00000001    # (obsolete in pygame 2) Surface is in video memory</span><span class="s0">&lt;/span&gt;</span>
+        <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">ASYNCBLIT      0x00000004    # (obsolete in pygame 2) Use asynchronous blits if possible</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">See :func:`pygame.display.set_mode()` for flags exclusive to the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">display surface.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Used internally (read-only)</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">::</span><span class="s0">&lt;/span&gt;</span>
+
+        <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">HWACCEL        0x00000100    # Blit uses hardware acceleration</span><span class="s0">&lt;/span&gt;</span>
+        <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">SRCCOLORKEY    0x00001000    # Blit uses a source color key</span><span class="s0">&lt;/span&gt;</span>
+        <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">RLEACCELOK     0x00002000    # Private flag</span><span class="s0">&lt;/span&gt;</span>
+        <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">RLEACCEL       0x00004000    # Surface is RLE encoded</span><span class="s0">&lt;/span&gt;</span>
+        <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">SRCALPHA       0x00010000    # Blit uses source alpha blending</span><span class="s0">&lt;/span&gt;</span>
+        <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">PREALLOC       0x01000000    # Surface uses preallocated memory</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_flags ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_pitch</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`get the number of bytes used per Surface row`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_pitch() -</span><span class="s4">&amp;gt; </span><span class="s1">int`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Return the number of bytes separating each row in the Surface. Surfaces</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">in video memory are not always linearly packed. Subsurfaces will also</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">have a larger pitch than their real width.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This value is not needed for normal pygame usage.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_pitch ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_masks</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`the bitmasks needed to convert between a color and a mapped integer`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_masks() -</span><span class="s4">&amp;gt; </span><span class="s1">(R, G, B, A)`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returns the bitmasks used to isolate each color in a mapped integer.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This value is not needed for normal pygame usage.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_masks ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: set_masks</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`set the bitmasks needed to convert between a color and a mapped integer`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_masks((r,g,b,a)) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This is not needed for normal pygame usage.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. note:: In SDL2, the masks are read-only and accordingly this method will raise</span><span class="s0">&lt;/span&gt;</span>
+                <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">an AttributeError if called.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.8.1</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.set_masks ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_shifts</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`the bit shifts needed to convert between a color and a mapped integer`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_shifts() -</span><span class="s4">&amp;gt; </span><span class="s1">(R, G, B, A)`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returns the pixel shifts need to convert between each color and a mapped</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">integer.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This value is not needed for normal pygame usage.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_shifts ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: set_shifts</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`sets the bit shifts needed to convert between a color and a mapped integer`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_shifts((r,g,b,a)) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This is not needed for normal pygame usage.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. note:: In SDL2, the shifts are read-only and accordingly this method will raise</span><span class="s0">&lt;/span&gt;</span>
+                <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">an AttributeError if called.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.8.1</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.set_shifts ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_losses</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`the significant bits used to convert between a color and a mapped integer`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_losses() -</span><span class="s4">&amp;gt; </span><span class="s1">(R, G, B, A)`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Return the least significant number of bits stripped from each color in a</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">mapped integer.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This value is not needed for normal pygame usage.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_losses ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_bounding_rect</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`find the smallest rect containing data`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_bounding_rect(min_alpha = 1) -</span><span class="s4">&amp;gt; </span><span class="s1">Rect`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returns the smallest rectangular region that contains all the pixels in</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">the surface that have an alpha value greater than or equal to the minimum</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">alpha value.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function will temporarily lock and unlock the Surface as needed.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.8</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_bounding_rect ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_view</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`return a buffer view of the Surface's pixels.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_view(</span><span class="s4">&amp;lt;</span><span class="s1">kind</span><span class="s4">&amp;gt;</span><span class="s1">='2') -</span><span class="s4">&amp;gt; </span><span class="s1">BufferProxy`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Return an object which exports a surface's internal pixel buffer as</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">a C level array struct, Python level array interface or a C level</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">buffer interface. The new buffer protocol is supported.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The kind argument is the length 1 string '0', '1', '2', '3',</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">'r', 'g', 'b', or 'a'. The letters are case insensitive;</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">'A' will work as well. The argument can be either a Unicode or byte (char)</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">string. The default is '2'.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">'0' returns a contiguous unstructured bytes view. No surface shape</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">information is given. A ``ValueError`` is raised if the surface's pixels</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">are discontinuous.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">'1' returns a (surface-width * surface-height) array of continuous</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pixels. A ``ValueError`` is raised if the surface pixels are</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">discontinuous.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">'2' returns a (surface-width, surface-height) array of raw pixels.</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The pixels are surface-bytesize-d unsigned integers. The pixel format is</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">surface specific. The 3 byte unsigned integers of 24 bit surfaces are</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">unlikely accepted by anything other than other pygame functions.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">'3' returns a (surface-width, surface-height, 3) array of ``RGB`` color</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">components. Each of the red, green, and blue components are unsigned</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">bytes. Only 24-bit and 32-bit surfaces are supported. The color</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">components must be in either ``RGB`` or ``BGR`` order within the pixel.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">'r' for red, 'g' for green, 'b' for blue, and 'a' for alpha return a</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">(surface-width, surface-height) view of a single color component within a</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">surface: a color plane. Color components are unsigned bytes. Both 24-bit</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">and 32-bit surfaces support 'r', 'g', and 'b'. Only 32-bit surfaces with</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``SRCALPHA`` support 'a'.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The surface is locked only when an exposed interface is accessed.</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">For new buffer interface accesses, the surface is unlocked once the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">last buffer view is released. For array interface and old buffer</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">interface accesses, the surface remains locked until the BufferProxy</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">object is released.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.9.2</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_buffer</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`acquires a buffer object for the pixels of the Surface.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_buffer() -</span><span class="s4">&amp;gt; </span><span class="s1">BufferProxy`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Return a buffer object for the pixels of the Surface. The buffer can be</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">used for direct pixel access and manipulation. Surface pixel data is</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">represented as an unstructured block of memory, with a start address</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">and length in bytes. The data need not be contiguous. Any gaps are</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">included in the length, but otherwise ignored.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This method implicitly locks the Surface. The lock will be released when</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">the returned :mod:`pygame.BufferProxy` object is garbage collected.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.8</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Surface.get_buffer ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: _pixels_address</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`pixel buffer address`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`_pixels_address -</span><span class="s4">&amp;gt; </span><span class="s1">int`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The starting address of the surface's raw pixel bytes.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.9.2</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.Surface ##</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;/pre&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>

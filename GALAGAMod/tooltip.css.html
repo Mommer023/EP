@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>tooltip.css</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+tooltip.css</font>
+</center></td></tr></table>
+<pre><span class="s0">/* Implement hyperlink tooltips 
+ * 
+ * Adapted from &quot;Sexy Tooltips with Just CSS&quot; 
+ * http://sixrevisions.com/css/css-only-tooltips/ 
+ */</span>
+
+<span class="s1">.tooltip {</span>
+  <span class="s1">cursor: help; text-decoration: none;</span>
+  <span class="s1">position: relative;</span>
+<span class="s1">}</span>
+
+<span class="s1">.tooltip span.tooltip-content {</span>
+  <span class="s1">margin-left: -</span><span class="s2">999</span><span class="s1">em;</span>
+  <span class="s1">position: absolute;</span>
+<span class="s1">}</span>
+
+<span class="s1">.tooltip:hover span.tooltip-content {</span>
+  <span class="s1">position: absolute;</span>
+  <span class="s1">left: </span><span class="s2">1</span><span class="s1">em;</span>
+  <span class="s1">top: </span><span class="s2">2</span><span class="s1">em;</span>
+  <span class="s1">z-index: </span><span class="s2">99</span><span class="s1">;</span>
+  <span class="s1">margin-left: </span><span class="s2">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">.tooltip:hover img {</span>
+  <span class="s1">border: </span><span class="s2">0</span><span class="s1">;</span>
+  <span class="s1">margin: -</span><span class="s2">10</span><span class="s1">px </span><span class="s2">0 0 </span><span class="s1">-</span><span class="s2">55</span><span class="s1">px;</span>
+  <span class="s1">float: left;</span>
+  <span class="s1">position: absolute;</span>
+<span class="s1">}</span>
+
+<span class="s1">.tooltip:hover em {</span>
+  <span class="s1">font-family: Candara, Tahoma, Geneva, sans-serif;</span>
+  <span class="s1">font-size: </span><span class="s2">1</span><span class="s1">.</span><span class="s2">2</span><span class="s1">em;</span>
+  <span class="s1">font-weight: bold;</span>
+  <span class="s1">display: block;</span>
+  <span class="s1">padding: </span><span class="s2">0</span><span class="s1">.</span><span class="s2">2</span><span class="s1">em </span><span class="s2">0 0</span><span class="s1">.</span><span class="s2">6</span><span class="s1">em </span><span class="s2">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">.classic { padding: </span><span class="s2">0</span><span class="s1">.</span><span class="s2">8</span><span class="s1">em </span><span class="s2">1</span><span class="s1">em; }</span>
+
+<span class="s1">.custom { padding: </span><span class="s2">0</span><span class="s1">.</span><span class="s2">5</span><span class="s1">em </span><span class="s2">0</span><span class="s1">.</span><span class="s2">8</span><span class="s1">em </span><span class="s2">0</span><span class="s1">.</span><span class="s2">8</span><span class="s1">em </span><span class="s2">2</span><span class="s1">em; }</span>
+
+<span class="s1">* html a:hover { background: transparent; }</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/custom.css">    
+</head>
+  <body>
+    <div class="topnav">
+        <a href="/index">Home</a>
+        <a href="/search">Search</a>
+        <a href="/history">History</a>
+        <a href="/Forecast">Forecast</a>
+        <li style="float:right"><a class="active" href="/register">Register</a></li>
+    </div>
+
+    <h1>Weather History Search</h1>
+
+    <div class="content">
+        <h2>Please enter a location to view historical weather data for the last 7 days</h2>
+        <input placeholder="City/State/Zip" id="search" />
+        <button onclick="getWeatherHistory()">Search</button><br><br>
+
+        <table id="output"></table>
+    </div>
+
+    <script>
+      function getWeatherHistory() {
+          var city = document.getElementById("search").value;
+          var url = "/weather-history?city=" + encodeURIComponent(city);
+          
+          fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            let output = "<thead>Weather history for " + data.city + "</thead>" + 
+              "<tr><th>Date</th>"+ "<th>Max Temperature (°F)</th><th>Min Temperature (°F)</th>"+"<th>Average Temperature (°F)</th>"+"<th>Sunrise</th>   "+"    <th>Sunset</th></tr>"; 
+              for (let date in data.historical) {
+                let historicalData = data.historical[date];
+                if (historicalData.maxtemp && historicalData.mintemp && historicalData.astro.sunrise && historicalData.astro.sunset) {
+                  let maxTemp = historicalData.maxtemp * 1.8 + 32;
+                  let minTemp = historicalData.mintemp * 1.8 + 32;
+                  let avgTemp = historicalData.avgtemp * 1.8 + 32;
+                  let sunrise = historicalData.astro.sunrise;
+                  let sunset = historicalData.astro.sunset;
+                  output += "<tr>" + "<td>" + new Date(date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) + "</td>" 
+                    + "<td>"
+                    + maxTemp.toFixed(0) + "°F</td>" + "<td>"
+                    + minTemp.toFixed(0) + "°F</td>" + "<td>"
+                    + avgTemp.toFixed(0) + "°F</td>" +"<td>" 
+                    + sunrise + "   </td>" + "<td>" 
+                    + sunset + "    </td>" + "</tr>";
+                  } else {
+                  var dateObj = new Date(date);
+                  dateObj.setDate(dateObj.getDate() );
+                  var options = { year: 'numeric', month: 'short', day: 'numeric' };
+                  var yesterdayDate = dateObj.toLocaleDateString('en-US', options);
+                  output += "<tr><td>" + yesterdayDate  + "</td><td>Error</td><td>Error</td><td>Error</td><td>Error</td><td>Error</td>";
+                }
+              }
+              output += "</tr>";
+              document.getElementById("output").innerHTML = output;
+            })
+            .catch(error => {
+              document.getElementById("output").innerHTML = "<h1>" + error.message + "</h1>";
+          });
+        }
+    </script>
+  </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/custom.css">    
+</head>
+  <body>
+    <div class="topnav">
+        <a href="/index">Home</a>
+        <a href="/search">Search</a>
+        <a href="/history">History</a>
+        <a href="/Forecast">Forecast</a>
+        <li style="float:right"><a class="active" href="/register">Register</a></li>
+    </div>
+
+    <h1>Weather History Search</h1>
+
+    <div class="content">
+        <h2>Please enter a location to view historical weather data for the last 7 days</h2>
+        <input placeholder="City/State/Zip" id="search" />
+        <button onclick="getWeatherHistory()">Search</button><br><br>
+
+        <table id="output"></table>
+    </div>
+
+    <script>
+      function getWeatherHistory() {
+          var city = document.getElementById("search").value;
+          var url = "/weather-history?city=" + encodeURIComponent(city);
+          
+          fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            let output = "<thead>Weather history for " + data.city + "</thead>" + 
+              "<tr><th>Date</th>"+ "<th>Max Temperature (°F)</th><th>Min Temperature (°F)</th>"+"<th>Average Temperature (°F)</th>"+"<th>Sunrise</th>   "+"    <th>Sunset</th></tr>"; 
+              for (let date in data.historical) {
+                let historicalData = data.historical[date];
+                if (historicalData.maxtemp && historicalData.mintemp && historicalData.astro.sunrise && historicalData.astro.sunset) {
+                  let maxTemp = historicalData.maxtemp * 1.8 + 32;
+                  let minTemp = historicalData.mintemp * 1.8 + 32;
+                  let avgTemp = historicalData.avgtemp * 1.8 + 32;
+                  let sunrise = historicalData.astro.sunrise;
+                  let sunset = historicalData.astro.sunset;
+                  output += "<tr>" + "<td>" + new Date(date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) + "</td>" 
+                    + "<td>"
+                    + maxTemp.toFixed(0) + "°F</td>" + "<td>"
+                    + minTemp.toFixed(0) + "°F</td>" + "<td>"
+                    + avgTemp.toFixed(0) + "°F</td>" +"<td>" 
+                    + sunrise + "   </td>" + "<td>" 
+                    + sunset + "    </td>" + "</tr>";
+                  } else {
+                  var dateObj = new Date(date);
+                  dateObj.setDate(dateObj.getDate() );
+                  var options = { year: 'numeric', month: 'short', day: 'numeric' };
+                  var yesterdayDate = dateObj.toLocaleDateString('en-US', options);
+                  output += "<tr><td>" + yesterdayDate  + "</td><td>Error</td><td>Error</td><td>Error</td><td>Error</td><td>Error</td>";
+                }
+              }
+              output += "</tr>";
+              document.getElementById("output").innerHTML = output;
+            })
+            .catch(error => {
+              document.getElementById("output").innerHTML = "<h1>" + error.message + "</h1>";
+          });
+        }
+    </script>
+  </body>
+>>>>>>> refs/remotes/origin/main
+</html>

@@ -1,0 +1,406 @@
+<html>
+<head>
+<title>image.rst.txt.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #e8bf6a;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #bababa;}
+.s3 { color: #a5c261;}
+.s4 { color: #6d9cbe;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+image.rst.txt.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;html&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+<span class="s0">&lt;title&gt;</span><span class="s1">image.rst.txt</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;meta </span><span class="s2">http-equiv</span><span class="s3">=&quot;Content-Type&quot; </span><span class="s2">content</span><span class="s3">=&quot;text/html; charset=utf-8&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;style </span><span class="s2">type</span><span class="s3">=&quot;text/css&quot;</span><span class="s0">&gt;</span>
+<span class="s1">.s0 { color: #a9b7c6;}</span>
+<span class="s0">&lt;/style&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body </span><span class="s2">bgcolor</span><span class="s3">=&quot;#2b2b2b&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;table </span><span class="s2">CELLSPACING</span><span class="s3">=0 </span><span class="s2">CELLPADDING</span><span class="s3">=5 </span><span class="s2">COLS</span><span class="s3">=1 </span><span class="s2">WIDTH</span><span class="s3">=&quot;100%&quot; </span><span class="s2">BGCOLOR</span><span class="s3">=&quot;#606060&quot; </span><span class="s0">&gt;</span>
+<span class="s0">&lt;tr&gt;&lt;td&gt;&lt;center&gt;</span>
+<span class="s0">&lt;font </span><span class="s2">face</span><span class="s3">=&quot;Arial, Helvetica&quot; </span><span class="s2">color</span><span class="s3">=&quot;#000000&quot;</span><span class="s0">&gt;</span>
+<span class="s1">image.rst.txt</span><span class="s0">&lt;/font&gt;</span>
+<span class="s0">&lt;/center&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</span>
+<span class="s0">&lt;pre&gt;&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. include:: common.txt</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:mod:`pygame.image`</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">===================</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. module:: pygame.image</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:synopsis: pygame module for loading and saving images</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`pygame module for image transfer`</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The image module contains functions for loading and saving pictures, as well as</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">transferring Surfaces to formats usable by other packages.</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Note that there is no Image class; an image is loaded as a Surface object. The</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Surface class allows manipulation (drawing lines, setting pixels, capturing</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">regions, etc.).</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">In the vast majority of installations, pygame is built to support extended</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">formats, using the SDL_Image library behind the scenes. However, some</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">installations may only support uncompressed ``BMP`` images. With full image</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">support, the :func:`pygame.image.load()` function can load the following</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">formats.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``BMP``</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``GIF`` (non-animated)</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``JPEG``</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``LBM`` (and ``PBM``, ``PGM``, ``PPM``)</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``PCX``</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``PNG``</span><span class="s0">&lt;/span&gt;</span>
+   
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``PNM``</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``SVG`` (limited support, using Nano SVG)</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``TGA`` (uncompressed)</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``TIFF``</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``WEBP``</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``XPM``</span><span class="s0">&lt;/span&gt;</span>
+   
+   
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 2.0 Loading SVG, WebP, PNM</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Saving images only supports a limited set of formats. You can save to the</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">following formats.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``BMP``</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``JPEG``</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``PNG``</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``TGA``</span><span class="s0">&lt;/span&gt;</span>
+   
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``JPEG`` and ``JPG``, as well as ``TIF`` and ``TIFF`` refer to the same file format</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.8 Saving PNG and JPEG files.</span><span class="s0">&lt;/span&gt;</span>
+
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. function:: load</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`load new image from a file (or file-like object)`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`load(filename) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`load(fileobj, namehint=</span><span class="s4">&amp;quot;&amp;quot;</span><span class="s1">) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Load an image from a file source. You can pass either a filename, a Python</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">file-like object, or a pathlib.Path.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Pygame will automatically determine the image type (e.g., ``GIF`` or bitmap)</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">and create a new Surface object from the data. In some cases it will need to</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">know the file extension (e.g., ``GIF`` images should end in </span><span class="s4">&amp;quot;</span><span class="s1">.gif</span><span class="s4">&amp;quot;</span><span class="s1">). If you</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pass a raw file-like object, you may also want to pass the original filename</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">as the namehint argument.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The returned Surface will contain the same color format, colorkey and alpha</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">transparency as the file it came from. You will often want to call</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:func:`pygame.Surface.convert()` with no arguments, to create a copy that</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">will draw more quickly on the screen.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">For alpha transparency, like in .png images, use the</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:func:`pygame.Surface.convert_alpha()` method after loading so that the</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">image has per pixel transparency.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Pygame may not always be built to support all image formats. At minimum it</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">will support uncompressed ``BMP``. If :func:`pygame.image.get_extended()`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">returns ``True``, you should be able to load most images (including PNG, JPG</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">and GIF).</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">You should use :func:`os.path.join()` for compatibility.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">::</span><span class="s0">&lt;/span&gt;</span>
+
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">eg. asurf = pygame.image.load(os.path.join('data', 'bla.png'))</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.image.load ##</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. function:: save</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`save an image to file (or file-like object)`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`save(Surface, filename) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`save(Surface, fileobj, namehint=</span><span class="s4">&amp;quot;&amp;quot;</span><span class="s1">) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This will save your Surface as either a ``BMP``, ``TGA``, ``PNG``, or</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``JPEG`` image. If the filename extension is unrecognized it will default to</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``TGA``. Both ``TGA``, and ``BMP`` file formats create uncompressed files.</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">You can pass a filename, a pathlib.Path or a Python file-like object.</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">For file-like object, the image is saved to ``TGA`` format unless</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">a namehint with a recognizable extension is passed in.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. note:: When saving to a file-like object, it seems that for most formats,</span><span class="s0">&lt;/span&gt;</span>
+             <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">the object needs to be flushed after saving to it to make loading</span><span class="s0">&lt;/span&gt;</span>
+             <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">from it possible.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionchanged:: 1.8 Saving PNG and JPEG files.</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionchanged:: 2.0.0</span><span class="s0">&lt;/span&gt;</span>
+                       <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The ``namehint`` parameter was added to make it possible</span><span class="s0">&lt;/span&gt;</span>
+                       <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">to save other formats than ``TGA`` to a file-like object.</span><span class="s0">&lt;/span&gt;</span>
+                       <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Saving to a file-like object with JPEG is possible.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.image.save ##</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. function:: get_sdl_image_version</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`get version number of the SDL_Image library being used`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_sdl_image_version() -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_sdl_image_version() -</span><span class="s4">&amp;gt; </span><span class="s1">(major, minor, patch)`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">If pygame is built with extended image formats, then this function will</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">return the SDL_Image library's version number as a tuple of 3 integers</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``(major, minor, patch)``. If not, then it will return ``None``.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 2.0.0</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.image.get_sdl_image_version ##</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. function:: get_extended</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`test if extended image formats can be loaded`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_extended() -</span><span class="s4">&amp;gt; </span><span class="s1">bool`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">If pygame is built with extended image formats this function will return</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">True. It is still not possible to determine which formats will be available,</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">but generally you will be able to load them all.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.image.get_extended ##</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. function:: tostring</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`transfer image to byte buffer`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`tostring(Surface, format, flipped=False) -</span><span class="s4">&amp;gt; </span><span class="s1">bytes`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Creates a string of bytes that can be transferred with the ``fromstring``</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">or ``frombytes`` methods in other Python imaging packages. Some Python</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">image packages prefer their images in bottom-to-top format (PyOpenGL for</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">example). If you pass ``True`` for the flipped argument, the byte buffer</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">will be vertically flipped.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The format argument is a string of one of the following values. Note that</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">only 8-bit Surfaces can use the </span><span class="s4">&amp;quot;</span><span class="s1">P</span><span class="s4">&amp;quot; </span><span class="s1">format. The other formats will work for</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">any Surface. Also note that other Python image packages support more formats</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">than pygame.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``P``, 8-bit palettized Surfaces</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``RGB``, 24-bit image</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``RGBX``, 32-bit image with unused space</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``RGBA``, 32-bit image with an alpha channel</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``ARGB``, 32-bit image with alpha channel first</span><span class="s0">&lt;/span&gt;</span>
+      
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``BGRA``, 32-bit image with alpha channel, red and blue channels swapped</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``RGBA_PREMULT``, 32-bit image with colors scaled by alpha channel</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``ARGB_PREMULT``, 32-bit image with colors scaled by alpha channel, alpha channel first</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. note:: it is preferred to use :func:`tobytes` as of pygame 2.1.3</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 2.1.3 BGRA format</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.image.tostring ##</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. function:: tobytes</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`transfer image to byte buffer`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`tobytes(Surface, format, flipped=False) -</span><span class="s4">&amp;gt; </span><span class="s1">bytes`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Creates a string of bytes that can be transferred with the ``fromstring``</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">or ``frombytes`` methods in other Python imaging packages. Some Python</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">image packages prefer their images in bottom-to-top format (PyOpenGL for</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">example). If you pass ``True`` for the flipped argument, the byte buffer</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">will be vertically flipped.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The format argument is a string of one of the following values. Note that</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">only 8-bit Surfaces can use the </span><span class="s4">&amp;quot;</span><span class="s1">P</span><span class="s4">&amp;quot; </span><span class="s1">format. The other formats will work for</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">any Surface. Also note that other Python image packages support more formats</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">than pygame.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``P``, 8-bit palettized Surfaces</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``RGB``, 24-bit image</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``RGBX``, 32-bit image with unused space</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``RGBA``, 32-bit image with an alpha channel</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``ARGB``, 32-bit image with alpha channel first</span><span class="s0">&lt;/span&gt;</span>
+      
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``BGRA``, 32-bit image with alpha channel, red and blue channels swapped      </span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``RGBA_PREMULT``, 32-bit image with colors scaled by alpha channel</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``ARGB_PREMULT``, 32-bit image with colors scaled by alpha channel, alpha channel first</span><span class="s0">&lt;/span&gt;</span>
+   
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. note:: this function is an alias for :func:`fromstring`. The use of this</span><span class="s0">&lt;/span&gt;</span>
+             <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">function is recommended over :func:`fromstring` as of pygame 2.1.3.</span><span class="s0">&lt;/span&gt;</span>
+             <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function was introduced so it matches nicely with other </span><span class="s0">&lt;/span&gt;</span>
+             <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">libraries (PIL, numpy, etc), and with people's expectations.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 2.1.3 </span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.image.tobytes ##</span><span class="s0">&lt;/span&gt;</span>
+
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. function:: fromstring</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`create new Surface from a byte buffer`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`fromstring(bytes, size, format, flipped=False) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function takes arguments similar to :func:`pygame.image.tostring()`.</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The size argument is a pair of numbers representing the width and height.</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Once the new Surface is created it is independent from the memory of the</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">bytes passed in.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The bytes and format passed must compute to the exact size of image</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">specified. Otherwise a ``ValueError`` will be raised.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">See the :func:`pygame.image.frombuffer()` method for a potentially faster</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">way to transfer images into pygame.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. note:: it is preferred to use :func:`frombytes` as of pygame 2.1.3</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.image.fromstring ##</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. function:: frombytes</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`create new Surface from a byte buffer`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`frombytes(bytes, size, format, flipped=False) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function takes arguments similar to :func:`pygame.image.tobytes()`.</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The size argument is a pair of numbers representing the width and height.</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Once the new Surface is created it is independent from the memory of the</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">bytes passed in.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The bytes and format passed must compute to the exact size of image</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">specified. Otherwise a ``ValueError`` will be raised.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">See the :func:`pygame.image.frombuffer()` method for a potentially faster</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">way to transfer images into pygame.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. note:: this function is an alias for :func:`fromstring`. The use of this</span><span class="s0">&lt;/span&gt;</span>
+             <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">function is recommended over :func:`fromstring` as of pygame 2.1.3.</span><span class="s0">&lt;/span&gt;</span>
+             <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function was introduced so it matches nicely with other </span><span class="s0">&lt;/span&gt;</span>
+             <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">libraries (PIL, numpy, etc), and with people's expectations.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 2.1.3 </span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.image.frombytes ##</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. function:: frombuffer</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`create a new Surface that shares data inside a bytes buffer`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`frombuffer(buffer, size, format) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Create a new Surface that shares pixel data directly from a buffer. This</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">buffer can be bytes, a bytearray, a memoryview, a</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:class:`pygame.BufferProxy`, or any object that supports the buffer protocol.</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This method takes similar arguments to :func:`pygame.image.fromstring()`, but</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">is unable to vertically flip the source data.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This will run much faster than :func:`pygame.image.fromstring`, since no</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pixel data must be allocated and copied.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">It accepts the following 'format' arguments:</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``P``, 8-bit palettized Surfaces</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``RGB``, 24-bit image</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``BGR``, 24-bit image, red and blue channels swapped.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``RGBX``, 32-bit image with unused space</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``RGBA``, 32-bit image with an alpha channel</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``ARGB``, 32-bit image with alpha channel first</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``BGRA``, 32-bit image with alpha channel, red and blue channels swapped</span><span class="s0">&lt;/span&gt;</span>
+  
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 2.1.3 BGRA format</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.image.frombuffer ##</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. function:: load_basic</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`load new BMP image from a file (or file-like object)`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`load_basic(file) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Load an image from a file source. You can pass either a filename or a Python</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">file-like object, or a pathlib.Path.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function only supports loading </span><span class="s4">&amp;quot;</span><span class="s1">basic</span><span class="s4">&amp;quot; </span><span class="s1">image format, ie ``BMP``</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">format.</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function is always available, no matter how pygame was built.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.image.load_basic ##</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. function:: load_extended</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`load an image from a file (or file-like object)`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`load_extended(filename) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`load_extended(fileobj, namehint=</span><span class="s4">&amp;quot;&amp;quot;</span><span class="s1">) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function is similar to :func:`pygame.image.load()`, except that this</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">function can only be used if pygame was built with extended image format</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">support.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionchanged:: 2.0.1</span><span class="s0">&lt;/span&gt;</span>
+                       <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function is always available, but raises an</span><span class="s0">&lt;/span&gt;</span>
+                       <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``NotImplementedError`` if extended image formats are</span><span class="s0">&lt;/span&gt;</span>
+                       <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">not supported.</span><span class="s0">&lt;/span&gt;</span>
+                       <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Previously, this function may or may not be</span><span class="s0">&lt;/span&gt;</span>
+                       <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">available, depending on the state of extended image</span><span class="s0">&lt;/span&gt;</span>
+                       <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">format support.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.image.load_extended ##</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. function:: save_extended</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`save a png/jpg image to file (or file-like object)`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`save_extended(Surface, filename) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`save_extended(Surface, fileobj, namehint=</span><span class="s4">&amp;quot;&amp;quot;</span><span class="s1">) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This will save your Surface as either a ``PNG`` or ``JPEG`` image.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">In case the image is being saved to a file-like object, this function</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">uses the namehint argument to determine the format of the file being</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">saved. Saves to ``JPEG`` in case the namehint was not specified while</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">saving to a file-like object.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionchanged:: 2.0.1</span><span class="s0">&lt;/span&gt;</span>
+                       <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function is always available, but raises an</span><span class="s0">&lt;/span&gt;</span>
+                       <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``NotImplementedError`` if extended image formats are</span><span class="s0">&lt;/span&gt;</span>
+                       <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">not supported.</span><span class="s0">&lt;/span&gt;</span>
+                       <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Previously, this function may or may not be</span><span class="s0">&lt;/span&gt;</span>
+                       <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">available, depending on the state of extended image</span><span class="s0">&lt;/span&gt;</span>
+                       <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">format support.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.image.save_extended ##</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.image ##</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;/pre&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>

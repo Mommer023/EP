@@ -1,0 +1,922 @@
+<html>
+<head>
+<title>basic.css</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+basic.css</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+ * basic.css 
+ * ~~~~~~~~~ 
+ * 
+ * Sphinx stylesheet -- basic theme. 
+ * 
+ * :copyright: Copyright 2007-2023 by the Sphinx team, see AUTHORS. 
+ * :license: BSD, see LICENSE for details. 
+ * 
+ */</span>
+
+<span class="s0">/* -- main layout ----------------------------------------------------------- */</span>
+
+<span class="s1">div.clearer {</span>
+    <span class="s1">clear: both;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.section::after {</span>
+    <span class="s1">display: block;</span>
+    <span class="s1">content: </span><span class="s2">''</span><span class="s1">;</span>
+    <span class="s1">clear: left;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- relbar ---------------------------------------------------------------- */</span>
+
+<span class="s1">div.related {</span>
+    <span class="s1">width: </span><span class="s3">100</span><span class="s1">%;</span>
+    <span class="s1">font-size: </span><span class="s3">90</span><span class="s1">%;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.related h3 {</span>
+    <span class="s1">display: none;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.related ul {</span>
+    <span class="s1">margin: </span><span class="s3">0</span><span class="s1">;</span>
+    <span class="s1">padding: </span><span class="s3">0 0 0 10</span><span class="s1">px;</span>
+    <span class="s1">list-style: none;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.related li {</span>
+    <span class="s1">display: inline;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.related li.right {</span>
+    <span class="s1">float: right;</span>
+    <span class="s1">margin-right: </span><span class="s3">5</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- sidebar --------------------------------------------------------------- */</span>
+
+<span class="s1">div.sphinxsidebarwrapper {</span>
+    <span class="s1">padding: </span><span class="s3">10</span><span class="s1">px </span><span class="s3">5</span><span class="s1">px </span><span class="s3">0 10</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.sphinxsidebar {</span>
+    <span class="s1">float: left;</span>
+    <span class="s1">width: </span><span class="s3">230</span><span class="s1">px;</span>
+    <span class="s1">margin-left: -</span><span class="s3">100</span><span class="s1">%;</span>
+    <span class="s1">font-size: </span><span class="s3">90</span><span class="s1">%;</span>
+    <span class="s1">word-wrap: break-word;</span>
+    <span class="s1">overflow-wrap : break-word;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.sphinxsidebar ul {</span>
+    <span class="s1">list-style: none;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.sphinxsidebar ul ul,</span>
+<span class="s1">div.sphinxsidebar ul.want-points {</span>
+    <span class="s1">margin-left: </span><span class="s3">20</span><span class="s1">px;</span>
+    <span class="s1">list-style: square;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.sphinxsidebar ul ul {</span>
+    <span class="s1">margin-top: </span><span class="s3">0</span><span class="s1">;</span>
+    <span class="s1">margin-bottom: </span><span class="s3">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.sphinxsidebar form {</span>
+    <span class="s1">margin-top: </span><span class="s3">10</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.sphinxsidebar input {</span>
+    <span class="s1">border: </span><span class="s3">1</span><span class="s1">px solid #</span><span class="s3">98</span><span class="s1">dbcc;</span>
+    <span class="s1">font-family: sans-serif;</span>
+    <span class="s1">font-size: </span><span class="s3">1</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.sphinxsidebar #searchbox form.search {</span>
+    <span class="s1">overflow: hidden;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.sphinxsidebar #searchbox input[type=</span><span class="s2">&quot;text&quot;</span><span class="s1">] {</span>
+    <span class="s1">float: left;</span>
+    <span class="s1">width: </span><span class="s3">80</span><span class="s1">%;</span>
+    <span class="s1">padding: </span><span class="s3">0</span><span class="s1">.</span><span class="s3">25</span><span class="s1">em;</span>
+    <span class="s1">box-sizing: border-box;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.sphinxsidebar #searchbox input[type=</span><span class="s2">&quot;submit&quot;</span><span class="s1">] {</span>
+    <span class="s1">float: left;</span>
+    <span class="s1">width: </span><span class="s3">20</span><span class="s1">%;</span>
+    <span class="s1">border-left: none;</span>
+    <span class="s1">padding: </span><span class="s3">0</span><span class="s1">.</span><span class="s3">25</span><span class="s1">em;</span>
+    <span class="s1">box-sizing: border-box;</span>
+<span class="s1">}</span>
+
+
+<span class="s1">img {</span>
+    <span class="s1">border: </span><span class="s3">0</span><span class="s1">;</span>
+    <span class="s1">max-width: </span><span class="s3">100</span><span class="s1">%;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- search page ----------------------------------------------------------- */</span>
+
+<span class="s1">ul.search {</span>
+    <span class="s1">margin: </span><span class="s3">10</span><span class="s1">px </span><span class="s3">0 0 20</span><span class="s1">px;</span>
+    <span class="s1">padding: </span><span class="s3">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">ul.search li {</span>
+    <span class="s1">padding: </span><span class="s3">5</span><span class="s1">px </span><span class="s3">0 5</span><span class="s1">px </span><span class="s3">20</span><span class="s1">px;</span>
+    <span class="s1">background-image: url(file.png);</span>
+    <span class="s1">background-repeat: no-repeat;</span>
+    <span class="s1">background-position: </span><span class="s3">0 7</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">ul.search li a {</span>
+    <span class="s1">font-weight: bold;</span>
+<span class="s1">}</span>
+
+<span class="s1">ul.search li p.context {</span>
+    <span class="s1">color: #</span><span class="s3">888</span><span class="s1">;</span>
+    <span class="s1">margin: </span><span class="s3">2</span><span class="s1">px </span><span class="s3">0 0 30</span><span class="s1">px;</span>
+    <span class="s1">text-align: left;</span>
+<span class="s1">}</span>
+
+<span class="s1">ul.keywordmatches li.goodmatch a {</span>
+    <span class="s1">font-weight: bold;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- index page ------------------------------------------------------------ */</span>
+
+<span class="s1">table.contentstable {</span>
+    <span class="s1">width: </span><span class="s3">90</span><span class="s1">%;</span>
+    <span class="s1">margin-left: auto;</span>
+    <span class="s1">margin-right: auto;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.contentstable p.biglink {</span>
+    <span class="s1">line-height: </span><span class="s3">150</span><span class="s1">%;</span>
+<span class="s1">}</span>
+
+<span class="s1">a.biglink {</span>
+    <span class="s1">font-size: </span><span class="s3">1</span><span class="s1">.</span><span class="s3">3</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">span.linkdescr {</span>
+    <span class="s1">font-style: italic;</span>
+    <span class="s1">padding-top: </span><span class="s3">5</span><span class="s1">px;</span>
+    <span class="s1">font-size: </span><span class="s3">90</span><span class="s1">%;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- general index --------------------------------------------------------- */</span>
+
+<span class="s1">table.indextable {</span>
+    <span class="s1">width: </span><span class="s3">100</span><span class="s1">%;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.indextable td {</span>
+    <span class="s1">text-align: left;</span>
+    <span class="s1">vertical-align: top;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.indextable ul {</span>
+    <span class="s1">margin-top: </span><span class="s3">0</span><span class="s1">;</span>
+    <span class="s1">margin-bottom: </span><span class="s3">0</span><span class="s1">;</span>
+    <span class="s1">list-style-type: none;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.indextable &gt; tbody &gt; tr &gt; td &gt; ul {</span>
+    <span class="s1">padding-left: </span><span class="s3">0</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.indextable tr.pcap {</span>
+    <span class="s1">height: </span><span class="s3">10</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.indextable tr.cap {</span>
+    <span class="s1">margin-top: </span><span class="s3">10</span><span class="s1">px;</span>
+    <span class="s1">background-color: #f2f2f2;</span>
+<span class="s1">}</span>
+
+<span class="s1">img.toggler {</span>
+    <span class="s1">margin-right: </span><span class="s3">3</span><span class="s1">px;</span>
+    <span class="s1">margin-top: </span><span class="s3">3</span><span class="s1">px;</span>
+    <span class="s1">cursor: pointer;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.modindex-jumpbox {</span>
+    <span class="s1">border-top: </span><span class="s3">1</span><span class="s1">px solid #ddd;</span>
+    <span class="s1">border-bottom: </span><span class="s3">1</span><span class="s1">px solid #ddd;</span>
+    <span class="s1">margin: </span><span class="s3">1</span><span class="s1">em </span><span class="s3">0 1</span><span class="s1">em </span><span class="s3">0</span><span class="s1">;</span>
+    <span class="s1">padding: </span><span class="s3">0</span><span class="s1">.</span><span class="s3">4</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.genindex-jumpbox {</span>
+    <span class="s1">border-top: </span><span class="s3">1</span><span class="s1">px solid #ddd;</span>
+    <span class="s1">border-bottom: </span><span class="s3">1</span><span class="s1">px solid #ddd;</span>
+    <span class="s1">margin: </span><span class="s3">1</span><span class="s1">em </span><span class="s3">0 1</span><span class="s1">em </span><span class="s3">0</span><span class="s1">;</span>
+    <span class="s1">padding: </span><span class="s3">0</span><span class="s1">.</span><span class="s3">4</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- domain module index --------------------------------------------------- */</span>
+
+<span class="s1">table.modindextable td {</span>
+    <span class="s1">padding: </span><span class="s3">2</span><span class="s1">px;</span>
+    <span class="s1">border-collapse: collapse;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- general body styles --------------------------------------------------- */</span>
+
+<span class="s1">div.body {</span>
+    <span class="s1">min-width: </span><span class="s3">360</span><span class="s1">px;</span>
+    <span class="s1">max-width: </span><span class="s3">800</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.body p, div.body dd, div.body li, div.body blockquote {</span>
+    <span class="s1">-moz-hyphens: auto;</span>
+    <span class="s1">-ms-hyphens: auto;</span>
+    <span class="s1">-webkit-hyphens: auto;</span>
+    <span class="s1">hyphens: auto;</span>
+<span class="s1">}</span>
+
+<span class="s1">a.headerlink {</span>
+    <span class="s1">visibility: hidden;</span>
+<span class="s1">}</span>
+
+<span class="s1">h1:hover &gt; a.headerlink,</span>
+<span class="s1">h2:hover &gt; a.headerlink,</span>
+<span class="s1">h3:hover &gt; a.headerlink,</span>
+<span class="s1">h4:hover &gt; a.headerlink,</span>
+<span class="s1">h5:hover &gt; a.headerlink,</span>
+<span class="s1">h6:hover &gt; a.headerlink,</span>
+<span class="s1">dt:hover &gt; a.headerlink,</span>
+<span class="s1">caption:hover &gt; a.headerlink,</span>
+<span class="s1">p.caption:hover &gt; a.headerlink,</span>
+<span class="s1">div.code-block-caption:hover &gt; a.headerlink {</span>
+    <span class="s1">visibility: visible;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.body p.caption {</span>
+    <span class="s1">text-align: inherit;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.body td {</span>
+    <span class="s1">text-align: left;</span>
+<span class="s1">}</span>
+
+<span class="s1">.first {</span>
+    <span class="s1">margin-top: </span><span class="s3">0 </span><span class="s1">!important;</span>
+<span class="s1">}</span>
+
+<span class="s1">p.rubric {</span>
+    <span class="s1">margin-top: </span><span class="s3">30</span><span class="s1">px;</span>
+    <span class="s1">font-weight: bold;</span>
+<span class="s1">}</span>
+
+<span class="s1">img.align-left, figure.align-left, .figure.align-left, object.align-left {</span>
+    <span class="s1">clear: left;</span>
+    <span class="s1">float: left;</span>
+    <span class="s1">margin-right: </span><span class="s3">1</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">img.align-right, figure.align-right, .figure.align-right, object.align-right {</span>
+    <span class="s1">clear: right;</span>
+    <span class="s1">float: right;</span>
+    <span class="s1">margin-left: </span><span class="s3">1</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">img.align-center, figure.align-center, .figure.align-center, object.align-center {</span>
+  <span class="s1">display: block;</span>
+  <span class="s1">margin-left: auto;</span>
+  <span class="s1">margin-right: auto;</span>
+<span class="s1">}</span>
+
+<span class="s1">img.align-default, figure.align-default, .figure.align-default {</span>
+  <span class="s1">display: block;</span>
+  <span class="s1">margin-left: auto;</span>
+  <span class="s1">margin-right: auto;</span>
+<span class="s1">}</span>
+
+<span class="s1">.align-left {</span>
+    <span class="s1">text-align: left;</span>
+<span class="s1">}</span>
+
+<span class="s1">.align-center {</span>
+    <span class="s1">text-align: center;</span>
+<span class="s1">}</span>
+
+<span class="s1">.align-default {</span>
+    <span class="s1">text-align: center;</span>
+<span class="s1">}</span>
+
+<span class="s1">.align-right {</span>
+    <span class="s1">text-align: right;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- sidebars -------------------------------------------------------------- */</span>
+
+<span class="s1">div.sidebar,</span>
+<span class="s1">aside.sidebar {</span>
+    <span class="s1">margin: </span><span class="s3">0 0 0</span><span class="s1">.</span><span class="s3">5</span><span class="s1">em </span><span class="s3">1</span><span class="s1">em;</span>
+    <span class="s1">border: </span><span class="s3">1</span><span class="s1">px solid #ddb;</span>
+    <span class="s1">padding: </span><span class="s3">7</span><span class="s1">px;</span>
+    <span class="s1">background-color: #ffe;</span>
+    <span class="s1">width: </span><span class="s3">40</span><span class="s1">%;</span>
+    <span class="s1">float: right;</span>
+    <span class="s1">clear: right;</span>
+    <span class="s1">overflow-x: auto;</span>
+<span class="s1">}</span>
+
+<span class="s1">p.sidebar-title {</span>
+    <span class="s1">font-weight: bold;</span>
+<span class="s1">}</span>
+
+<span class="s1">nav.contents,</span>
+<span class="s1">aside.topic,</span>
+<span class="s1">div.admonition, div.topic, blockquote {</span>
+    <span class="s1">clear: left;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- topics ---------------------------------------------------------------- */</span>
+
+<span class="s1">nav.contents,</span>
+<span class="s1">aside.topic,</span>
+<span class="s1">div.topic {</span>
+    <span class="s1">border: </span><span class="s3">1</span><span class="s1">px solid #ccc;</span>
+    <span class="s1">padding: </span><span class="s3">7</span><span class="s1">px;</span>
+    <span class="s1">margin: </span><span class="s3">10</span><span class="s1">px </span><span class="s3">0 10</span><span class="s1">px </span><span class="s3">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">p.topic-title {</span>
+    <span class="s1">font-size: </span><span class="s3">1</span><span class="s1">.</span><span class="s3">1</span><span class="s1">em;</span>
+    <span class="s1">font-weight: bold;</span>
+    <span class="s1">margin-top: </span><span class="s3">10</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- admonitions ----------------------------------------------------------- */</span>
+
+<span class="s1">div.admonition {</span>
+    <span class="s1">margin-top: </span><span class="s3">10</span><span class="s1">px;</span>
+    <span class="s1">margin-bottom: </span><span class="s3">10</span><span class="s1">px;</span>
+    <span class="s1">padding: </span><span class="s3">7</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.admonition dt {</span>
+    <span class="s1">font-weight: bold;</span>
+<span class="s1">}</span>
+
+<span class="s1">p.admonition-title {</span>
+    <span class="s1">margin: </span><span class="s3">0</span><span class="s1">px </span><span class="s3">10</span><span class="s1">px </span><span class="s3">5</span><span class="s1">px </span><span class="s3">0</span><span class="s1">px;</span>
+    <span class="s1">font-weight: bold;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.body p.centered {</span>
+    <span class="s1">text-align: center;</span>
+    <span class="s1">margin-top: </span><span class="s3">25</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- content of sidebars/topics/admonitions -------------------------------- */</span>
+
+<span class="s1">div.sidebar &gt; :last-child,</span>
+<span class="s1">aside.sidebar &gt; :last-child,</span>
+<span class="s1">nav.contents &gt; :last-child,</span>
+<span class="s1">aside.topic &gt; :last-child,</span>
+<span class="s1">div.topic &gt; :last-child,</span>
+<span class="s1">div.admonition &gt; :last-child {</span>
+    <span class="s1">margin-bottom: </span><span class="s3">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.sidebar::after,</span>
+<span class="s1">aside.sidebar::after,</span>
+<span class="s1">nav.contents::after,</span>
+<span class="s1">aside.topic::after,</span>
+<span class="s1">div.topic::after,</span>
+<span class="s1">div.admonition::after,</span>
+<span class="s1">blockquote::after {</span>
+    <span class="s1">display: block;</span>
+    <span class="s1">content: </span><span class="s2">''</span><span class="s1">;</span>
+    <span class="s1">clear: both;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- tables ---------------------------------------------------------------- */</span>
+
+<span class="s1">table.docutils {</span>
+    <span class="s1">margin-top: </span><span class="s3">10</span><span class="s1">px;</span>
+    <span class="s1">margin-bottom: </span><span class="s3">10</span><span class="s1">px;</span>
+    <span class="s1">border: </span><span class="s3">0</span><span class="s1">;</span>
+    <span class="s1">border-collapse: collapse;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.align-center {</span>
+    <span class="s1">margin-left: auto;</span>
+    <span class="s1">margin-right: auto;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.align-default {</span>
+    <span class="s1">margin-left: auto;</span>
+    <span class="s1">margin-right: auto;</span>
+<span class="s1">}</span>
+
+<span class="s1">table caption span.caption-number {</span>
+    <span class="s1">font-style: italic;</span>
+<span class="s1">}</span>
+
+<span class="s1">table caption span.caption-text {</span>
+<span class="s1">}</span>
+
+<span class="s1">table.docutils td, table.docutils th {</span>
+    <span class="s1">padding: </span><span class="s3">1</span><span class="s1">px </span><span class="s3">8</span><span class="s1">px </span><span class="s3">1</span><span class="s1">px </span><span class="s3">5</span><span class="s1">px;</span>
+    <span class="s1">border-top: </span><span class="s3">0</span><span class="s1">;</span>
+    <span class="s1">border-left: </span><span class="s3">0</span><span class="s1">;</span>
+    <span class="s1">border-right: </span><span class="s3">0</span><span class="s1">;</span>
+    <span class="s1">border-bottom: </span><span class="s3">1</span><span class="s1">px solid #aaa;</span>
+<span class="s1">}</span>
+
+<span class="s1">th {</span>
+    <span class="s1">text-align: left;</span>
+    <span class="s1">padding-right: </span><span class="s3">5</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.citation {</span>
+    <span class="s1">border-left: solid </span><span class="s3">1</span><span class="s1">px gray;</span>
+    <span class="s1">margin-left: </span><span class="s3">1</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.citation td {</span>
+    <span class="s1">border-bottom: none;</span>
+<span class="s1">}</span>
+
+<span class="s1">th &gt; :first-child,</span>
+<span class="s1">td &gt; :first-child {</span>
+    <span class="s1">margin-top: </span><span class="s3">0</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">th &gt; :last-child,</span>
+<span class="s1">td &gt; :last-child {</span>
+    <span class="s1">margin-bottom: </span><span class="s3">0</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- figures --------------------------------------------------------------- */</span>
+
+<span class="s1">div.figure, figure {</span>
+    <span class="s1">margin: </span><span class="s3">0</span><span class="s1">.</span><span class="s3">5</span><span class="s1">em;</span>
+    <span class="s1">padding: </span><span class="s3">0</span><span class="s1">.</span><span class="s3">5</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.figure p.caption, figcaption {</span>
+    <span class="s1">padding: </span><span class="s3">0</span><span class="s1">.</span><span class="s3">3</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.figure p.caption span.caption-number,</span>
+<span class="s1">figcaption span.caption-number {</span>
+    <span class="s1">font-style: italic;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.figure p.caption span.caption-text,</span>
+<span class="s1">figcaption span.caption-text {</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- field list styles ----------------------------------------------------- */</span>
+
+<span class="s1">table.field-list td, table.field-list th {</span>
+    <span class="s1">border: </span><span class="s3">0 </span><span class="s1">!important;</span>
+<span class="s1">}</span>
+
+<span class="s1">.field-list ul {</span>
+    <span class="s1">margin: </span><span class="s3">0</span><span class="s1">;</span>
+    <span class="s1">padding-left: </span><span class="s3">1</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">.field-list p {</span>
+    <span class="s1">margin: </span><span class="s3">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">.field-name {</span>
+    <span class="s1">-moz-hyphens: manual;</span>
+    <span class="s1">-ms-hyphens: manual;</span>
+    <span class="s1">-webkit-hyphens: manual;</span>
+    <span class="s1">hyphens: manual;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- hlist styles ---------------------------------------------------------- */</span>
+
+<span class="s1">table.hlist {</span>
+    <span class="s1">margin: </span><span class="s3">1</span><span class="s1">em </span><span class="s3">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.hlist td {</span>
+    <span class="s1">vertical-align: top;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- object description styles --------------------------------------------- */</span>
+
+<span class="s1">.sig {</span>
+	<span class="s1">font-family: </span><span class="s2">'Consolas'</span><span class="s1">, </span><span class="s2">'Menlo'</span><span class="s1">, </span><span class="s2">'DejaVu Sans Mono'</span><span class="s1">, </span><span class="s2">'Bitstream Vera Sans Mono'</span><span class="s1">, monospace;</span>
+<span class="s1">}</span>
+
+<span class="s1">.sig-name, code.descname {</span>
+    <span class="s1">background-color: transparent;</span>
+    <span class="s1">font-weight: bold;</span>
+<span class="s1">}</span>
+
+<span class="s1">.sig-name {</span>
+	<span class="s1">font-size: </span><span class="s3">1</span><span class="s1">.</span><span class="s3">1</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">code.descname {</span>
+    <span class="s1">font-size: </span><span class="s3">1</span><span class="s1">.</span><span class="s3">2</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">.sig-prename, code.descclassname {</span>
+    <span class="s1">background-color: transparent;</span>
+<span class="s1">}</span>
+
+<span class="s1">.optional {</span>
+    <span class="s1">font-size: </span><span class="s3">1</span><span class="s1">.</span><span class="s3">3</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">.sig-paren {</span>
+    <span class="s1">font-size: larger;</span>
+<span class="s1">}</span>
+
+<span class="s1">.sig-param.n {</span>
+	<span class="s1">font-style: italic;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* C++ specific styling */</span>
+
+<span class="s1">.sig-inline.c-texpr,</span>
+<span class="s1">.sig-inline.cpp-texpr {</span>
+	<span class="s1">font-family: unset;</span>
+<span class="s1">}</span>
+
+<span class="s1">.sig.c   .k, .sig.c   .kt,</span>
+<span class="s1">.sig.cpp .k, .sig.cpp .kt {</span>
+	<span class="s1">color: #</span><span class="s3">0033</span><span class="s1">B3;</span>
+<span class="s1">}</span>
+
+<span class="s1">.sig.c   .m,</span>
+<span class="s1">.sig.cpp .m {</span>
+	<span class="s1">color: #</span><span class="s3">1750</span><span class="s1">EB;</span>
+<span class="s1">}</span>
+
+<span class="s1">.sig.c   .s, .sig.c   .sc,</span>
+<span class="s1">.sig.cpp .s, .sig.cpp .sc {</span>
+	<span class="s1">color: #</span><span class="s3">067</span><span class="s1">D17;</span>
+<span class="s1">}</span>
+
+
+<span class="s0">/* -- other body styles ----------------------------------------------------- */</span>
+
+<span class="s1">ol.arabic {</span>
+    <span class="s1">list-style: decimal;</span>
+<span class="s1">}</span>
+
+<span class="s1">ol.loweralpha {</span>
+    <span class="s1">list-style: lower-alpha;</span>
+<span class="s1">}</span>
+
+<span class="s1">ol.upperalpha {</span>
+    <span class="s1">list-style: upper-alpha;</span>
+<span class="s1">}</span>
+
+<span class="s1">ol.lowerroman {</span>
+    <span class="s1">list-style: lower-roman;</span>
+<span class="s1">}</span>
+
+<span class="s1">ol.upperroman {</span>
+    <span class="s1">list-style: upper-roman;</span>
+<span class="s1">}</span>
+
+<span class="s1">:not(li) &gt; ol &gt; li:first-child &gt; :first-child,</span>
+<span class="s1">:not(li) &gt; ul &gt; li:first-child &gt; :first-child {</span>
+    <span class="s1">margin-top: </span><span class="s3">0</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">:not(li) &gt; ol &gt; li:last-child &gt; :last-child,</span>
+<span class="s1">:not(li) &gt; ul &gt; li:last-child &gt; :last-child {</span>
+    <span class="s1">margin-bottom: </span><span class="s3">0</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">ol.simple ol p,</span>
+<span class="s1">ol.simple ul p,</span>
+<span class="s1">ul.simple ol p,</span>
+<span class="s1">ul.simple ul p {</span>
+    <span class="s1">margin-top: </span><span class="s3">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">ol.simple &gt; li:not(:first-child) &gt; p,</span>
+<span class="s1">ul.simple &gt; li:not(:first-child) &gt; p {</span>
+    <span class="s1">margin-top: </span><span class="s3">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">ol.simple p,</span>
+<span class="s1">ul.simple p {</span>
+    <span class="s1">margin-bottom: </span><span class="s3">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">aside.footnote &gt; span,</span>
+<span class="s1">div.citation &gt; span {</span>
+    <span class="s1">float: left;</span>
+<span class="s1">}</span>
+<span class="s1">aside.footnote &gt; span:last-of-type,</span>
+<span class="s1">div.citation &gt; span:last-of-type {</span>
+  <span class="s1">padding-right: </span><span class="s3">0</span><span class="s1">.</span><span class="s3">5</span><span class="s1">em;</span>
+<span class="s1">}</span>
+<span class="s1">aside.footnote &gt; p {</span>
+  <span class="s1">margin-left: </span><span class="s3">2</span><span class="s1">em;</span>
+<span class="s1">}</span>
+<span class="s1">div.citation &gt; p {</span>
+  <span class="s1">margin-left: </span><span class="s3">4</span><span class="s1">em;</span>
+<span class="s1">}</span>
+<span class="s1">aside.footnote &gt; p:last-of-type,</span>
+<span class="s1">div.citation &gt; p:last-of-type {</span>
+    <span class="s1">margin-bottom: </span><span class="s3">0</span><span class="s1">em;</span>
+<span class="s1">}</span>
+<span class="s1">aside.footnote &gt; p:last-of-type:after,</span>
+<span class="s1">div.citation &gt; p:last-of-type:after {</span>
+    <span class="s1">content: </span><span class="s2">&quot;&quot;</span><span class="s1">;</span>
+    <span class="s1">clear: both;</span>
+<span class="s1">}</span>
+
+<span class="s1">dl.field-list {</span>
+    <span class="s1">display: grid;</span>
+    <span class="s1">grid-template-columns: fit-content(</span><span class="s3">30</span><span class="s1">%) auto;</span>
+<span class="s1">}</span>
+
+<span class="s1">dl.field-list &gt; dt {</span>
+    <span class="s1">font-weight: bold;</span>
+    <span class="s1">word-break: break-word;</span>
+    <span class="s1">padding-left: </span><span class="s3">0</span><span class="s1">.</span><span class="s3">5</span><span class="s1">em;</span>
+    <span class="s1">padding-right: </span><span class="s3">5</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">dl.field-list &gt; dd {</span>
+    <span class="s1">padding-left: </span><span class="s3">0</span><span class="s1">.</span><span class="s3">5</span><span class="s1">em;</span>
+    <span class="s1">margin-top: </span><span class="s3">0</span><span class="s1">em;</span>
+    <span class="s1">margin-left: </span><span class="s3">0</span><span class="s1">em;</span>
+    <span class="s1">margin-bottom: </span><span class="s3">0</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">dl {</span>
+    <span class="s1">margin-bottom: </span><span class="s3">15</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">dd &gt; :first-child {</span>
+    <span class="s1">margin-top: </span><span class="s3">0</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">dd ul, dd table {</span>
+    <span class="s1">margin-bottom: </span><span class="s3">10</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">dd {</span>
+    <span class="s1">margin-top: </span><span class="s3">3</span><span class="s1">px;</span>
+    <span class="s1">margin-bottom: </span><span class="s3">10</span><span class="s1">px;</span>
+    <span class="s1">margin-left: </span><span class="s3">30</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">dl &gt; dd:last-child,</span>
+<span class="s1">dl &gt; dd:last-child &gt; :last-child {</span>
+    <span class="s1">margin-bottom: </span><span class="s3">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">dt:target, span.highlighted {</span>
+    <span class="s1">background-color: #fbe54e;</span>
+<span class="s1">}</span>
+
+<span class="s1">rect.highlighted {</span>
+    <span class="s1">fill: #fbe54e;</span>
+<span class="s1">}</span>
+
+<span class="s1">dl.glossary dt {</span>
+    <span class="s1">font-weight: bold;</span>
+    <span class="s1">font-size: </span><span class="s3">1</span><span class="s1">.</span><span class="s3">1</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">.versionmodified {</span>
+    <span class="s1">font-style: italic;</span>
+<span class="s1">}</span>
+
+<span class="s1">.system-message {</span>
+    <span class="s1">background-color: #fda;</span>
+    <span class="s1">padding: </span><span class="s3">5</span><span class="s1">px;</span>
+    <span class="s1">border: </span><span class="s3">3</span><span class="s1">px solid red;</span>
+<span class="s1">}</span>
+
+<span class="s1">.footnote:target  {</span>
+    <span class="s1">background-color: #ffa;</span>
+<span class="s1">}</span>
+
+<span class="s1">.line-block {</span>
+    <span class="s1">display: block;</span>
+    <span class="s1">margin-top: </span><span class="s3">1</span><span class="s1">em;</span>
+    <span class="s1">margin-bottom: </span><span class="s3">1</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">.line-block .line-block {</span>
+    <span class="s1">margin-top: </span><span class="s3">0</span><span class="s1">;</span>
+    <span class="s1">margin-bottom: </span><span class="s3">0</span><span class="s1">;</span>
+    <span class="s1">margin-left: </span><span class="s3">1</span><span class="s1">.</span><span class="s3">5</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">.guilabel, .menuselection {</span>
+    <span class="s1">font-family: sans-serif;</span>
+<span class="s1">}</span>
+
+<span class="s1">.accelerator {</span>
+    <span class="s1">text-decoration: underline;</span>
+<span class="s1">}</span>
+
+<span class="s1">.classifier {</span>
+    <span class="s1">font-style: oblique;</span>
+<span class="s1">}</span>
+
+<span class="s1">.classifier:before {</span>
+    <span class="s1">font-style: normal;</span>
+    <span class="s1">margin: </span><span class="s3">0 0</span><span class="s1">.</span><span class="s3">5</span><span class="s1">em;</span>
+    <span class="s1">content: </span><span class="s2">&quot;:&quot;</span><span class="s1">;</span>
+    <span class="s1">display: inline-block;</span>
+<span class="s1">}</span>
+
+<span class="s1">abbr, acronym {</span>
+    <span class="s1">border-bottom: dotted </span><span class="s3">1</span><span class="s1">px;</span>
+    <span class="s1">cursor: help;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- code displays --------------------------------------------------------- */</span>
+
+<span class="s1">pre {</span>
+    <span class="s1">overflow: auto;</span>
+    <span class="s1">overflow-y: hidden;  </span><span class="s0">/* fixes display issues on Chrome browsers */</span>
+<span class="s1">}</span>
+
+<span class="s1">pre, div[class*=</span><span class="s2">&quot;highlight-&quot;</span><span class="s1">] {</span>
+    <span class="s1">clear: both;</span>
+<span class="s1">}</span>
+
+<span class="s1">span.pre {</span>
+    <span class="s1">-moz-hyphens: none;</span>
+    <span class="s1">-ms-hyphens: none;</span>
+    <span class="s1">-webkit-hyphens: none;</span>
+    <span class="s1">hyphens: none;</span>
+    <span class="s1">white-space: nowrap;</span>
+<span class="s1">}</span>
+
+<span class="s1">div[class*=</span><span class="s2">&quot;highlight-&quot;</span><span class="s1">] {</span>
+    <span class="s1">margin: </span><span class="s3">1</span><span class="s1">em </span><span class="s3">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">td.linenos pre {</span>
+    <span class="s1">border: </span><span class="s3">0</span><span class="s1">;</span>
+    <span class="s1">background-color: transparent;</span>
+    <span class="s1">color: #aaa;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.highlighttable {</span>
+    <span class="s1">display: block;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.highlighttable tbody {</span>
+    <span class="s1">display: block;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.highlighttable tr {</span>
+    <span class="s1">display: flex;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.highlighttable td {</span>
+    <span class="s1">margin: </span><span class="s3">0</span><span class="s1">;</span>
+    <span class="s1">padding: </span><span class="s3">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.highlighttable td.linenos {</span>
+    <span class="s1">padding-right: </span><span class="s3">0</span><span class="s1">.</span><span class="s3">5</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.highlighttable td.code {</span>
+    <span class="s1">flex: </span><span class="s3">1</span><span class="s1">;</span>
+    <span class="s1">overflow: hidden;</span>
+<span class="s1">}</span>
+
+<span class="s1">.highlight .hll {</span>
+    <span class="s1">display: block;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.highlight pre,</span>
+<span class="s1">table.highlighttable pre {</span>
+    <span class="s1">margin: </span><span class="s3">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.code-block-caption + div {</span>
+    <span class="s1">margin-top: </span><span class="s3">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.code-block-caption {</span>
+    <span class="s1">margin-top: </span><span class="s3">1</span><span class="s1">em;</span>
+    <span class="s1">padding: </span><span class="s3">2</span><span class="s1">px </span><span class="s3">5</span><span class="s1">px;</span>
+    <span class="s1">font-size: small;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.code-block-caption code {</span>
+    <span class="s1">background-color: transparent;</span>
+<span class="s1">}</span>
+
+<span class="s1">table.highlighttable td.linenos,</span>
+<span class="s1">span.linenos,</span>
+<span class="s1">div.highlight span.gp {  </span><span class="s0">/* gp: Generic.Prompt */</span>
+  <span class="s1">user-select: none;</span>
+  <span class="s1">-webkit-user-select: text; </span><span class="s0">/* Safari fallback only */</span>
+  <span class="s1">-webkit-user-select: none; </span><span class="s0">/* Chrome/Safari */</span>
+  <span class="s1">-moz-user-select: none; </span><span class="s0">/* Firefox */</span>
+  <span class="s1">-ms-user-select: none; </span><span class="s0">/* IE10+ */</span>
+<span class="s1">}</span>
+
+<span class="s1">div.code-block-caption span.caption-number {</span>
+    <span class="s1">padding: </span><span class="s3">0</span><span class="s1">.</span><span class="s3">1</span><span class="s1">em </span><span class="s3">0</span><span class="s1">.</span><span class="s3">3</span><span class="s1">em;</span>
+    <span class="s1">font-style: italic;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.code-block-caption span.caption-text {</span>
+<span class="s1">}</span>
+
+<span class="s1">div.literal-block-wrapper {</span>
+    <span class="s1">margin: </span><span class="s3">1</span><span class="s1">em </span><span class="s3">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">code.xref, a code {</span>
+    <span class="s1">background-color: transparent;</span>
+    <span class="s1">font-weight: bold;</span>
+<span class="s1">}</span>
+
+<span class="s1">h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {</span>
+    <span class="s1">background-color: transparent;</span>
+<span class="s1">}</span>
+
+<span class="s1">.viewcode-link {</span>
+    <span class="s1">float: right;</span>
+<span class="s1">}</span>
+
+<span class="s1">.viewcode-back {</span>
+    <span class="s1">float: right;</span>
+    <span class="s1">font-family: sans-serif;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.viewcode-block:target {</span>
+    <span class="s1">margin: -</span><span class="s3">1</span><span class="s1">px -</span><span class="s3">10</span><span class="s1">px;</span>
+    <span class="s1">padding: </span><span class="s3">0 10</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- math display ---------------------------------------------------------- */</span>
+
+<span class="s1">img.math {</span>
+    <span class="s1">vertical-align: middle;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.body div.math p {</span>
+    <span class="s1">text-align: center;</span>
+<span class="s1">}</span>
+
+<span class="s1">span.eqno {</span>
+    <span class="s1">float: right;</span>
+<span class="s1">}</span>
+
+<span class="s1">span.eqno a.headerlink {</span>
+    <span class="s1">position: absolute;</span>
+    <span class="s1">z-index: </span><span class="s3">1</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s1">div.math:hover a.headerlink {</span>
+    <span class="s1">visibility: visible;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* -- printout stylesheet --------------------------------------------------- */</span>
+
+<span class="s1">@media print {</span>
+    <span class="s1">div.document,</span>
+    <span class="s1">div.documentwrapper,</span>
+    <span class="s1">div.bodywrapper {</span>
+        <span class="s1">margin: </span><span class="s3">0 </span><span class="s1">!important;</span>
+        <span class="s1">width: </span><span class="s3">100</span><span class="s1">%;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">div.sphinxsidebar,</span>
+    <span class="s1">div.related,</span>
+    <span class="s1">div.footer,</span>
+    <span class="s1">#top-link {</span>
+        <span class="s1">display: none;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>

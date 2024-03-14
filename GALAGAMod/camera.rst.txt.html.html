@@ -1,0 +1,284 @@
+<html>
+<head>
+<title>camera.rst.txt.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #e8bf6a;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #bababa;}
+.s3 { color: #a5c261;}
+.s4 { color: #6d9cbe;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+camera.rst.txt.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;html&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+<span class="s0">&lt;title&gt;</span><span class="s1">camera.rst.txt</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;meta </span><span class="s2">http-equiv</span><span class="s3">=&quot;Content-Type&quot; </span><span class="s2">content</span><span class="s3">=&quot;text/html; charset=utf-8&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;style </span><span class="s2">type</span><span class="s3">=&quot;text/css&quot;</span><span class="s0">&gt;</span>
+<span class="s1">.s0 { color: #a9b7c6;}</span>
+<span class="s0">&lt;/style&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body </span><span class="s2">bgcolor</span><span class="s3">=&quot;#2b2b2b&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;table </span><span class="s2">CELLSPACING</span><span class="s3">=0 </span><span class="s2">CELLPADDING</span><span class="s3">=5 </span><span class="s2">COLS</span><span class="s3">=1 </span><span class="s2">WIDTH</span><span class="s3">=&quot;100%&quot; </span><span class="s2">BGCOLOR</span><span class="s3">=&quot;#606060&quot; </span><span class="s0">&gt;</span>
+<span class="s0">&lt;tr&gt;&lt;td&gt;&lt;center&gt;</span>
+<span class="s0">&lt;font </span><span class="s2">face</span><span class="s3">=&quot;Arial, Helvetica&quot; </span><span class="s2">color</span><span class="s3">=&quot;#000000&quot;</span><span class="s0">&gt;</span>
+<span class="s1">camera.rst.txt</span><span class="s0">&lt;/font&gt;</span>
+<span class="s0">&lt;/center&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</span>
+<span class="s0">&lt;pre&gt;&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. include:: common.txt</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:mod:`pygame.camera`</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">====================</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. module:: pygame.camera</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:synopsis: pygame module for camera use</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`pygame module for camera use`</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Pygame currently supports Linux (V4L2) and Windows (MSMF) cameras natively,</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">with wider platform support available via an integrated OpenCV backend.</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 2.0.2 Windows native camera support</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 2.0.3 New OpenCV backends</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">EXPERIMENTAL!: This API may change or disappear in later pygame releases. If</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">you use this, your code will very likely break with the next pygame release.</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The Bayer to ``RGB`` function is based on:</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">::</span><span class="s0">&lt;/span&gt;</span>
+
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Sonix SN9C101 based webcam basic I/F routines</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Copyright (C) 2004 Takafumi Mizuno </span><span class="s4">&amp;lt;</span><span class="s1">taka-qce@ls-a.jp</span><span class="s4">&amp;gt;</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Redistribution and use in source and binary forms, with or without</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">modification, are permitted provided that the following conditions</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">are met:</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">1. Redistributions of source code must retain the above copyright</span><span class="s0">&lt;/span&gt;</span>
+    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">notice, this list of conditions and the following disclaimer.</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">2. Redistributions in binary form must reproduce the above copyright</span><span class="s0">&lt;/span&gt;</span>
+    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">notice, this list of conditions and the following disclaimer in the</span><span class="s0">&lt;/span&gt;</span>
+    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">documentation and/or other materials provided with the distribution.</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF</span><span class="s0">&lt;/span&gt;</span>
+ <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">SUCH DAMAGE.</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">New in pygame 1.9.0.</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. function:: init</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Module init`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`init(backend = None) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function starts up the camera module, choosing the best webcam backend</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">it can find for your system. This is not guaranteed to succeed, and may even</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">attempt to import third party modules, like `OpenCV`. If you want to</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">override its backend choice, you can call pass the name of the backend you</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">want into this function. More about backends in</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:func:`get_backends()`.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionchanged:: 2.0.3 Option to explicitly select backend</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.camera.init ##</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. function:: get_backends</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Get the backends supported on this system`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_backends() -</span><span class="s4">&amp;gt; </span><span class="s1">[str]`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This function returns every backend it thinks has a possibility of working</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">on your system, in order of priority.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pygame.camera Backends:</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">::</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Backend           OS        Description</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">---------------------------------------------------------------------------------</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">_camera (MSMF)    Windows   Builtin, works on Windows 8+ Python3</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">_camera (V4L2)    Linux     Builtin</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">OpenCV            Any       Uses `opencv-python` module, can't enumerate cameras</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">OpenCV-Mac        Mac       Same as OpenCV, but has camera enumeration</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">VideoCapture      Windows   Uses abandoned `VideoCapture` module, can't enumerate</span><span class="s0">&lt;/span&gt;</span>
+                                  <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">cameras, may be removed in the future</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">There are two main differences among backends.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The _camera backends are built in to pygame itself, and require no third</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">party imports. All the other backends do. For the OpenCV and VideoCapture</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">backends, those modules need to be installed on your system.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The other big difference is </span><span class="s4">&amp;quot;</span><span class="s1">camera enumeration.</span><span class="s4">&amp;quot; </span><span class="s1">Some backends don't have</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">a way to list out camera names, or even the number of cameras on the</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">system. In these cases, :func:`list_cameras()` will return</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">something like ``[0]``. If you know you have multiple cameras on the </span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">system, these backend ports will pass through a </span><span class="s4">&amp;quot;</span><span class="s1">camera index number</span><span class="s4">&amp;quot; </span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">through if you use that as the ``device`` parameter.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 2.0.3</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.camera.get_backends ##</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. function:: colorspace</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Surface colorspace conversion`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`colorspace(Surface, format, DestSurface = None) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Allows for conversion from </span><span class="s4">&amp;quot;</span><span class="s1">RGB</span><span class="s4">&amp;quot; </span><span class="s1">to a destination colorspace of </span><span class="s4">&amp;quot;</span><span class="s1">HSV</span><span class="s4">&amp;quot; </span><span class="s1">or</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s4">&amp;quot;</span><span class="s1">YUV</span><span class="s4">&amp;quot;</span><span class="s1">. The source and destination surfaces must be the same size and pixel</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">depth. This is useful for computer vision on devices with limited processing</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">power. Capture as small of an image as possible, ``transform.scale()`` it</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">even smaller, and then convert the colorspace to ``YUV`` or ``HSV`` before</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">doing any processing on it.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.camera.colorspace ##</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. function:: list_cameras</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`returns a list of available cameras`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`list_cameras() -</span><span class="s4">&amp;gt; </span><span class="s1">[cameras]`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Checks the computer for available cameras and returns a list of strings of</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">camera names, ready to be fed into :class:`pygame.camera.Camera`.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">If the camera backend doesn't support webcam enumeration, this will return</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">something like ``[0]``. See :func:`get_backends()` for much more</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">information.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.camera.list_cameras ##</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. class:: Camera</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`load a camera`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`Camera(device, (width, height), format) -</span><span class="s4">&amp;gt; </span><span class="s1">Camera`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Loads a camera. On Linux, the device is typically something like</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s4">&amp;quot;</span><span class="s1">/dev/video0</span><span class="s4">&amp;quot;</span><span class="s1">. Default width and height are 640 by 480. </span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Format is the desired colorspace of the output. </span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This is useful for computer vision purposes. The default is</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">``RGB``. The following are supported:</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``RGB`` - Red, Green, Blue</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``YUV`` - Luma, Blue Chrominance, Red Chrominance</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">* ``HSV`` - Hue, Saturation, Value</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: start</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`opens, initializes, and starts capturing`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`start() -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Opens the camera device, attempts to initialize it, and begins recording</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">images to a buffer. The camera must be started before any of the below</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">functions can be used.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Camera.start ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: stop</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`stops, uninitializes, and closes the camera`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`stop() -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Stops recording, uninitializes the camera, and closes it. Once a camera</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">is stopped, the below functions cannot be used until it is started again.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Camera.stop ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_controls</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`gets current values of user controls`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_controls() -</span><span class="s4">&amp;gt; </span><span class="s1">(hflip = bool, vflip = bool, brightness)`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">If the camera supports it, get_controls will return the current settings</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">for horizontal and vertical image flip as bools and brightness as an int.</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">If unsupported, it will return the default values of (0, 0, 0). Note that</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">the return values here may be different than those returned by</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">set_controls, though these are more likely to be correct.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Camera.get_controls ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: set_controls</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`changes camera settings if supported by the camera`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_controls(hflip = bool, vflip = bool, brightness) -</span><span class="s4">&amp;gt; </span><span class="s1">(hflip = bool, vflip = bool, brightness)`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Allows you to change camera settings if the camera supports it. The</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">return values will be the input values if the camera claims it succeeded</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">or the values previously in use if not. Each argument is optional, and</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">the desired one can be chosen by supplying the keyword, like hflip. Note</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">that the actual settings being used by the camera may not be the same as</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">those returned by set_controls. On Windows, :code:`hflip` and :code:`vflip` are</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">implemented by pygame, not by the Camera, so they should always work, but</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:code:`brightness` is unsupported.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Camera.set_controls ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_size</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`returns the dimensions of the images being recorded`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_size() -</span><span class="s4">&amp;gt; </span><span class="s1">(width, height)`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Returns the current dimensions of the images being captured by the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">camera. This will return the actual size, which may be different than the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">one specified during initialization if the camera did not support that</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">size.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Camera.get_size ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: query_image</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`checks if a frame is ready`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`query_image() -</span><span class="s4">&amp;gt; </span><span class="s1">bool`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">If an image is ready to get, it returns true. Otherwise it returns false.</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Note that some webcams will always return False and will only queue a</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">frame when called with a blocking function like :func:`get_image()`.</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">On Windows (MSMF), and the  OpenCV backends, :func:`query_image()`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">should be reliable, though. This is useful to separate the framerate of</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">the game from that of the camera without having to use threading. </span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Camera.query_image ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_image</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`captures an image as a Surface`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_image(Surface = None) -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Pulls an image off of the buffer as an ``RGB`` Surface. It can optionally</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">reuse an existing Surface to save time. The bit-depth of the surface is</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">24 bits on Linux, 32 bits on Windows, or the same as the optionally</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">supplied Surface.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Camera.get_image ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_raw</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`returns an unmodified image as bytes`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_raw() -</span><span class="s4">&amp;gt; </span><span class="s1">bytes`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Gets an image from a camera as a string in the native pixelformat of the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">camera. Useful for integration with other libraries. This returns a</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">bytes object</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## Camera.get_raw ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.camera.Camera ##</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.camera ##</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;/pre&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>

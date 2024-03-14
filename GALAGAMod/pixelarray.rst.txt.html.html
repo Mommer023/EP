@@ -1,0 +1,332 @@
+<html>
+<head>
+<title>pixelarray.rst.txt.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #e8bf6a;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #bababa;}
+.s3 { color: #a5c261;}
+.s4 { color: #6d9cbe;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+pixelarray.rst.txt.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;html&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+<span class="s0">&lt;title&gt;</span><span class="s1">pixelarray.rst.txt</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;meta </span><span class="s2">http-equiv</span><span class="s3">=&quot;Content-Type&quot; </span><span class="s2">content</span><span class="s3">=&quot;text/html; charset=utf-8&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;style </span><span class="s2">type</span><span class="s3">=&quot;text/css&quot;</span><span class="s0">&gt;</span>
+<span class="s1">.s0 { color: #a9b7c6;}</span>
+<span class="s0">&lt;/style&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body </span><span class="s2">bgcolor</span><span class="s3">=&quot;#2b2b2b&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;table </span><span class="s2">CELLSPACING</span><span class="s3">=0 </span><span class="s2">CELLPADDING</span><span class="s3">=5 </span><span class="s2">COLS</span><span class="s3">=1 </span><span class="s2">WIDTH</span><span class="s3">=&quot;100%&quot; </span><span class="s2">BGCOLOR</span><span class="s3">=&quot;#606060&quot; </span><span class="s0">&gt;</span>
+<span class="s0">&lt;tr&gt;&lt;td&gt;&lt;center&gt;</span>
+<span class="s0">&lt;font </span><span class="s2">face</span><span class="s3">=&quot;Arial, Helvetica&quot; </span><span class="s2">color</span><span class="s3">=&quot;#000000&quot;</span><span class="s0">&gt;</span>
+<span class="s1">pixelarray.rst.txt</span><span class="s0">&lt;/font&gt;</span>
+<span class="s0">&lt;/center&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</span>
+<span class="s0">&lt;pre&gt;&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. include:: common.txt</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:class:`pygame.PixelArray`</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">==========================</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. currentmodule:: pygame</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. class:: PixelArray</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`pygame object for direct pixel access of surfaces`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`PixelArray(Surface) -</span><span class="s4">&amp;gt; </span><span class="s1">PixelArray`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The PixelArray wraps a Surface and provides direct access to the</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">surface's pixels. A pixel array can be one or two dimensional.</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">A two dimensional array, like its surface, is indexed [column, row].</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Pixel arrays support slicing, both for returning a subarray or</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">for assignment. A pixel array sliced on a single column or row</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">returns a one dimensional pixel array. Arithmetic and other operations</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">are not supported. A pixel array can be safely assigned to itself.</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Finally, pixel arrays export an array struct interface, allowing</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">them to interact with :mod:`pygame.pixelcopy` methods and NumPy</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">arrays.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">A PixelArray pixel item can be assigned a raw integer values, a</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:class:`pygame.Color` instance, or a (r, g, b[, a]) tuple.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">::</span><span class="s0">&lt;/span&gt;</span>
+
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pxarray[x, y] = 0xFF00FF</span><span class="s0">&lt;/span&gt;</span>
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pxarray[x, y] = pygame.Color(255, 0, 255)</span><span class="s0">&lt;/span&gt;</span>
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pxarray[x, y] = (255, 0, 255)</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">However, only a pixel's integer value is returned. So, to compare a pixel</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">to a particular color the color needs to be first mapped using</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">the :meth:`Surface.map_rgb()` method of the Surface object for which the</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">PixelArray was created.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">::</span><span class="s0">&lt;/span&gt;</span>
+
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pxarray = pygame.PixelArray(surface)</span><span class="s0">&lt;/span&gt;</span>
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1"># Check, if the first pixel at the topleft corner is blue</span><span class="s0">&lt;/span&gt;</span>
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">if pxarray[0, 0] == surface.map_rgb((0, 0, 255)):</span><span class="s0">&lt;/span&gt;</span>
+         <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">...</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">When assigning to a range of of pixels, a non tuple sequence of colors or</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">a PixelArray can be used as the value. For a sequence, the length must</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">match the PixelArray width.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">::</span><span class="s0">&lt;/span&gt;</span>
+
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pxarray[a:b] = 0xFF00FF                   # set all pixels to 0xFF00FF</span><span class="s0">&lt;/span&gt;</span>
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pxarray[a:b] = (0xFF00FF, 0xAACCEE, ... ) # first pixel = 0xFF00FF,</span><span class="s0">&lt;/span&gt;</span>
+                                               <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1"># second pixel  = 0xAACCEE, ...</span><span class="s0">&lt;/span&gt;</span>
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pxarray[a:b] = [(255, 0, 255), (170, 204, 238), ...] # same as above</span><span class="s0">&lt;/span&gt;</span>
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pxarray[a:b] = [(255, 0, 255), 0xAACCEE, ...]        # same as above</span><span class="s0">&lt;/span&gt;</span>
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pxarray[a:b] = otherarray[x:y]            # slice sizes must match</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">For PixelArray assignment, if the right hand side array has a row length</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">of 1, then the column is broadcast over the target array's rows. An</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">array of height 1 is broadcast over the target's columns, and is equivalent</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">to assigning a 1D PixelArray.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Subscript slices can also be used to assign to a rectangular subview of</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">the target PixelArray.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">::</span><span class="s0">&lt;/span&gt;</span>
+
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1"># Create some new PixelArray objects providing a different view</span><span class="s0">&lt;/span&gt;</span>
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1"># of the original array/surface.</span><span class="s0">&lt;/span&gt;</span>
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">newarray = pxarray[2:4, 3:5]</span><span class="s0">&lt;/span&gt;</span>
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">otherarray = pxarray[::2, ::2]</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Subscript slices can also be used to do fast rectangular pixel manipulations</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">instead of iterating over the x or y axis. The</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">::</span><span class="s0">&lt;/span&gt;</span>
+
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pxarray[::2, :] = (0, 0, 0)               # Make even columns black.</span><span class="s0">&lt;/span&gt;</span>
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pxarray[::2] = (0, 0, 0)                  # Same as [::2, :]</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">During its lifetime, the PixelArray locks the surface, thus you explicitly</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">have to close() it once its not used any more and the surface should perform</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">operations in the same scope. It is best to use it as a context manager</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">using the with PixelArray(surf) as pixel_array: style. So it works on pypy too.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">A simple ``:`` slice index for the column can be omitted.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">::</span><span class="s0">&lt;/span&gt;</span>
+
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pxarray[::2, ...] = (0, 0, 0)             # Same as pxarray[::2, :]</span><span class="s0">&lt;/span&gt;</span>
+     <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pxarray[...] = (255, 0, 0)                # Same as pxarray[:]</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">A note about PixelArray to PixelArray assignment, for arrays with an</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">item size of 3 (created from 24 bit surfaces) pixel values are translated</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">from the source to the destinations format. The red, green, and blue</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">color elements of each pixel are shifted to match the format of the</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">target surface. For all other pixel sizes no such remapping occurs.</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This should change in later pygame releases, where format conversions</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">are performed for all pixel sizes. To avoid code breakage when full mapped</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">copying is implemented it is suggested PixelArray to PixelArray copies be</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">only between surfaces of identical format.</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.9.4</span><span class="s0">&lt;/span&gt;</span>
+
+    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">- close() method was added. For explicitly cleaning up.</span><span class="s0">&lt;/span&gt;</span>
+    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">- being able to use PixelArray as a context manager for cleanup.</span><span class="s0">&lt;/span&gt;</span>
+    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">- both of these are useful for when working without reference counting (pypy).</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.9.2</span><span class="s0">&lt;/span&gt;</span>
+
+    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">- array struct interface</span><span class="s0">&lt;/span&gt;</span>
+    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">- transpose method</span><span class="s0">&lt;/span&gt;</span>
+    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">- broadcasting for a length 1 dimension</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionchanged:: 1.9.2</span><span class="s0">&lt;/span&gt;</span>
+
+    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">- A 2D PixelArray can have a length 1 dimension.</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Only an integer index on a 2D PixelArray returns a 1D array.</span><span class="s0">&lt;/span&gt;</span>
+    <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">- For assignment, a tuple can only be a color. Any other sequence type</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">is a sequence of colors.</span><span class="s0">&lt;/span&gt;</span>
+
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded: 1.8.0</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Subscript support</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded: 1.8.1</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Methods :meth:`make_surface`, :meth:`replace`, :meth:`extract`, and</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:meth:`compare`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded: 1.9.2</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Properties :attr:`itemsize`, :attr:`ndim`, :attr:`shape`,</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">and :attr:`strides`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded: 1.9.2</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Array struct interface</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded: 1.9.4</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Methods :meth:`close`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: surface</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets the Surface the PixelArray uses.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`surface -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">The Surface the PixelArray was created for.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## PixelArray.surface ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: itemsize</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Returns the byte size of a pixel array item`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`itemsize -</span><span class="s4">&amp;gt; </span><span class="s1">int`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This is the same as :meth:`Surface.get_bytesize` for the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">pixel array's surface.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.9.2</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: ndim</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Returns the number of dimensions.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`ndim -</span><span class="s4">&amp;gt; </span><span class="s1">int`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">A pixel array can be 1 or 2 dimensional.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.9.2</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: shape</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Returns the array size.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`shape -</span><span class="s4">&amp;gt; </span><span class="s1">tuple of int's`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">A tuple or length :attr:`ndim` giving the length of each</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">dimension. Analogous to :meth:`Surface.get_size`.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.9.2</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: strides</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Returns byte offsets for each array dimension.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`strides -</span><span class="s4">&amp;gt; </span><span class="s1">tuple of int's`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">A tuple or length :attr:`ndim` byte counts. When a stride is</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">multiplied by the corresponding index it gives the offset</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">of that index from the start of the array. A stride is negative</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">for an array that has is inverted (has a negative step).</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.9.2</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: make_surface</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Creates a new Surface from the current PixelArray.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`make_surface() -</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Creates a new Surface from the current PixelArray. Depending on the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">current PixelArray the size, pixel order etc. will be different from the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">original Surface.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">::</span><span class="s0">&lt;/span&gt;</span>
+
+        <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1"># Create a new surface flipped around the vertical axis.</span><span class="s0">&lt;/span&gt;</span>
+        <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">sf = pxarray[:,::-1].make_surface ()</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.8.1</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## PixelArray.make_surface ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: replace</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Replaces the passed color in the PixelArray with another one.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`replace(color, repcolor, distance=0, weights=(0.299, 0.587, 0.114)) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Replaces the pixels with the passed color in the PixelArray by changing</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">them them to the passed replacement color.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">It uses a simple weighted Euclidean distance formula to calculate the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">distance between the colors. The distance space ranges from 0.0 to 1.0</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">and is used as threshold for the color detection. This causes the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">replacement to take pixels with a similar, but not exactly identical</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">color, into account as well.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This is an in place operation that directly affects the pixels of the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">PixelArray.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.8.1</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## PixelArray.replace ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: extract</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Extracts the passed color from the PixelArray.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`extract(color, distance=0, weights=(0.299, 0.587, 0.114)) -</span><span class="s4">&amp;gt; </span><span class="s1">PixelArray`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Extracts the passed color by changing all matching pixels to white, while</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">non-matching pixels are changed to black. This returns a new PixelArray</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">with the black/white color mask.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">It uses a simple weighted Euclidean distance formula to calculate the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">distance between the colors. The distance space ranges from 0.0 to 1.0</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">and is used as threshold for the color detection. This causes the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">extraction to take pixels with a similar, but not exactly identical</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">color, into account as well.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.8.1</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## PixelArray.extract ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: compare</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Compares the PixelArray with another one.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`compare(array, distance=0, weights=(0.299, 0.587, 0.114)) -</span><span class="s4">&amp;gt; </span><span class="s1">PixelArray`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">Compares the contents of the PixelArray with those from the passed in</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">PixelArray. It returns a new PixelArray with a black/white color mask</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">that indicates the differences (black) of both arrays. Both PixelArray</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">objects must have identical bit depths and dimensions.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">It uses a simple weighted Euclidean distance formula to calculate the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">distance between the colors. The distance space ranges from 0.0 to 1.0</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">and is used as a threshold for the color detection. This causes the</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">comparison to mark pixels with a similar, but not exactly identical</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">color, as white.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.8.1</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## PixelArray.compare ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: transpose</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Exchanges the x and y axis.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`transpose() -</span><span class="s4">&amp;gt; </span><span class="s1">PixelArray`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This method returns a new view of the pixel array with the rows and</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">columns swapped. So for a (w, h) sized array a (h, w) slice is returned.</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">If an array is one dimensional, then a length 1 x dimension is added,</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">resulting in a 2D pixel array.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.9.2</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## PixelArray.transpose ##</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: close</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Closes the PixelArray, and releases Surface lock.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`transpose() -</span><span class="s4">&amp;gt; </span><span class="s1">PixelArray`</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This method is for explicitly closing the PixelArray, and releasing</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">a lock on the Surface.</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. versionadded:: 1.9.4</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## PixelArray.close ##</span><span class="s0">&lt;/span&gt;</span>
+
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. ## pygame.PixelArray ##</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;/pre&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>

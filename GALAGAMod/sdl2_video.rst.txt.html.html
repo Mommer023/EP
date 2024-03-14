@@ -1,0 +1,370 @@
+<html>
+<head>
+<title>sdl2_video.rst.txt.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #e8bf6a;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #bababa;}
+.s3 { color: #a5c261;}
+.s4 { color: #6d9cbe;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+sdl2_video.rst.txt.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;html&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+<span class="s0">&lt;title&gt;</span><span class="s1">sdl2_video.rst.txt</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;meta </span><span class="s2">http-equiv</span><span class="s3">=&quot;Content-Type&quot; </span><span class="s2">content</span><span class="s3">=&quot;text/html; charset=utf-8&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;style </span><span class="s2">type</span><span class="s3">=&quot;text/css&quot;</span><span class="s0">&gt;</span>
+<span class="s1">.s0 { color: #a9b7c6;}</span>
+<span class="s0">&lt;/style&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body </span><span class="s2">bgcolor</span><span class="s3">=&quot;#2b2b2b&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;table </span><span class="s2">CELLSPACING</span><span class="s3">=0 </span><span class="s2">CELLPADDING</span><span class="s3">=5 </span><span class="s2">COLS</span><span class="s3">=1 </span><span class="s2">WIDTH</span><span class="s3">=&quot;100%&quot; </span><span class="s2">BGCOLOR</span><span class="s3">=&quot;#606060&quot; </span><span class="s0">&gt;</span>
+<span class="s0">&lt;tr&gt;&lt;td&gt;&lt;center&gt;</span>
+<span class="s0">&lt;font </span><span class="s2">face</span><span class="s3">=&quot;Arial, Helvetica&quot; </span><span class="s2">color</span><span class="s3">=&quot;#000000&quot;</span><span class="s0">&gt;</span>
+<span class="s1">sdl2_video.rst.txt</span><span class="s0">&lt;/font&gt;</span>
+<span class="s0">&lt;/center&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</span>
+<span class="s0">&lt;pre&gt;&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. include:: common.txt</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:mod:`pygame.sdl2_video`</span><span class="s0">&lt;/span&gt;</span>
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">========================</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. module:: pygame._sdl2.video</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">:synopsis: Experimental pygame module for porting new SDL video systems</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. warning::</span><span class="s0">&lt;/span&gt;</span>
+	<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">This module isn't ready for prime time yet, it's still in development.</span><span class="s0">&lt;/span&gt;</span>
+        <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">These docs are primarily meant to help the pygame developers and super-early adopters</span><span class="s0">&lt;/span&gt;</span>
+        <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">who are in communication with the developers. This API will change.</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Experimental pygame module for porting new SDL video systems`</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. class:: Window</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`pygame object that represents a window`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`Window(title=</span><span class="s4">&amp;quot;</span><span class="s1">pygame</span><span class="s4">&amp;quot;</span><span class="s1">, size=(640, 480), position=None, fullscreen=False, fullscreen_desktop=False, keywords) -</span><span class="s4">&amp;gt; </span><span class="s1">Window`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. classmethod:: from_display_module</span><span class="s0">&lt;/span&gt;</span>
+   
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Creates window using window created by pygame.display.set_mode().`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`from_display_module() -</span><span class="s4">&amp;gt; </span><span class="s1">Window`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: grab</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets or sets whether the mouse is confined to the window.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`grab -</span><span class="s4">&amp;gt; </span><span class="s1">bool`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: relative_mouse</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets or sets the window's relative mouse motion state.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`relative_mouse -</span><span class="s4">&amp;gt; </span><span class="s1">bool`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: set_windowed</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Enable windowed mode (exit fullscreen).`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_windowed() -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: set_fullscreen</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Enter fullscreen.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_fullscreen(desktop=False) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: title</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets or sets whether the window title.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`title -</span><span class="s4">&amp;gt; </span><span class="s1">string`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: destroy</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Destroys the window.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`destroy() -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: hide</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Hide the window.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`hide() -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: show</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Show the window.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`show() -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: focus</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Raise the window above other windows and set the input focus. The </span><span class="s4">&amp;quot;</span><span class="s1">input_only</span><span class="s4">&amp;quot; </span><span class="s1">argument is only supported on X11.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`focus(input_only=False) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: restore</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Restore the size and position of a minimized or maximized window.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`restore() -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: maximize</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Maximize the window.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`maximize() -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: minimize</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Minimize the window.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`maximize() -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: resizable</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets whether the window is resizable.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`resizable -</span><span class="s4">&amp;gt; </span><span class="s1">bool`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: borderless</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Add or remove the border from the window.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`borderless -</span><span class="s4">&amp;gt; </span><span class="s1">bool`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: set_icon</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Set the icon for the window.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_icon(surface) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: id</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Get the unique window ID. *Read-only*`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`id -</span><span class="s4">&amp;gt; </span><span class="s1">int`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: size</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the window size.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`size -</span><span class="s4">&amp;gt; </span><span class="s1">(int, int)`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: position</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the window position.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`position -</span><span class="s4">&amp;gt; </span><span class="s1">(int, int) or WINDOWPOS_CENTERED or WINDOWPOS_UNDEFINED`	</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: opacity</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the window opacity. Between 0.0 (fully transparent) and 1.0 (fully opaque).`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`opacity -</span><span class="s4">&amp;gt; </span><span class="s1">float`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: brightness</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the brightness (gamma multiplier) for the display that owns the window.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`brightness -</span><span class="s4">&amp;gt; </span><span class="s1">float`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: display_index</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Get the index of the display that owns the window. *Read-only*`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`display_index -</span><span class="s4">&amp;gt; </span><span class="s1">int`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: set_modal_for</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Set the window as a modal for a parent window. This function is only supported on X11.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_modal_for(Window) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. class:: Texture	</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`pygame object that representing a Texture.`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`Texture(renderer, size, depth=0, static=False, streaming=False, target=False) -</span><span class="s4">&amp;gt; </span><span class="s1">Texture`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. staticmethod:: from_surface</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Create a texture from an existing surface.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`from_surface(renderer, surface) -</span><span class="s4">&amp;gt; </span><span class="s1">Texture`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: renderer</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets the renderer associated with the Texture. *Read-only*`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`renderer -</span><span class="s4">&amp;gt; </span><span class="s1">Renderer`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: width</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets the width of the Texture. *Read-only*`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`width -</span><span class="s4">&amp;gt; </span><span class="s1">int`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: height</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets the height of the Texture. *Read-only*`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`height -</span><span class="s4">&amp;gt; </span><span class="s1">int`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: alpha</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets an additional alpha value multiplied into render copy operations.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`alpha -</span><span class="s4">&amp;gt; </span><span class="s1">int`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: blend_mode</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the blend mode for the Texture.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`blend_mode -</span><span class="s4">&amp;gt; </span><span class="s1">int`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: color</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets an additional color value multiplied into render copy operations.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`color -</span><span class="s4">&amp;gt; </span><span class="s1">color`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_rect</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Get the rectangular area of the texture.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_rect(**kwargs) -</span><span class="s4">&amp;gt; </span><span class="s1">Rect`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: draw</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Copy a portion of the texture to the rendering target.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`draw(srcrect=None, dstrect=None, angle=0, origin=None, flip_x=False, flip_y=False) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: update</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Update the texture with a Surface. WARNING: Slow operation, use sparingly.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`update(surface, area=None) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. class:: Image</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Easy way to use a portion of a Texture without worrying about srcrect all the time.`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`Image(textureOrImage, srcrect=None) -</span><span class="s4">&amp;gt; </span><span class="s1">Image`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_rect</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Get the rectangular area of the Image.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_rect() -</span><span class="s4">&amp;gt; </span><span class="s1">Rect`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: draw</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Copy a portion of the Image to the rendering target.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`draw(srcrect=None, dstrect=None) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: angle</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the angle the Image draws itself with.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`angle -</span><span class="s4">&amp;gt; </span><span class="s1">float`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: origin</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the origin. Origin=None means the Image will be rotated around its center.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`origin -</span><span class="s4">&amp;gt; </span><span class="s1">(float, float) or None.`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: flip_x</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets whether the Image is flipped on the x axis.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`flip_x -</span><span class="s4">&amp;gt; </span><span class="s1">bool`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: flip_y</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets whether the Image is flipped on the y axis.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`flip_y -</span><span class="s4">&amp;gt; </span><span class="s1">bool`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: color</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the Image color modifier.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`color -</span><span class="s4">&amp;gt; </span><span class="s1">Color`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: alpha</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the Image alpha modifier.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`alpha -</span><span class="s4">&amp;gt; </span><span class="s1">float`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: blend_mode</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the blend mode for the Image.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`blend_mode -</span><span class="s4">&amp;gt; </span><span class="s1">int`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: texture</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the Texture the Image is based on.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`texture -</span><span class="s4">&amp;gt; </span><span class="s1">Texture`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: srcrect</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the Rect the Image is based on.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`srcrect -</span><span class="s4">&amp;gt; </span><span class="s1">Rect`</span><span class="s0">&lt;/span&gt;</span>
+
+<span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. class:: Renderer</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Create a 2D rendering context for a window.`</span><span class="s0">&lt;/span&gt;</span>
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`Renderer(window, index=-1, accelerated=-1, vsync=False, target_texture=False) -</span><span class="s4">&amp;gt; </span><span class="s1">Renderer`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. classmethod:: from_window</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Easy way to create a Renderer.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`from_window(window) -</span><span class="s4">&amp;gt; </span><span class="s1">Renderer`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: draw_blend_mode</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the blend mode used by the drawing functions.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`draw_blend_mode -</span><span class="s4">&amp;gt; </span><span class="s1">int`   </span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: draw_color</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the color used by the drawing functions.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`draw_color -</span><span class="s4">&amp;gt; </span><span class="s1">Color`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: clear</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Clear the current rendering target with the drawing color.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`clear() -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: present</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Updates the screen with any new rendering since previous call.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`present() -</span><span class="s4">&amp;gt; </span><span class="s1">None`	</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: get_viewport</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Returns the drawing area on the target.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`get_viewport() -</span><span class="s4">&amp;gt; </span><span class="s1">Rect`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: set_viewport</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Set the drawing area on the target. If area is None, the entire target will be used.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`set_viewport(area) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: logical_size</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the logical size.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`logical_size -</span><span class="s4">&amp;gt; </span><span class="s1">(int width, int height)`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: scale</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the scale.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`scale -</span><span class="s4">&amp;gt; </span><span class="s1">(float x_scale, float y_scale)`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. attribute:: target</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Gets and sets the render target. None represents the default target (the renderer).`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`target -</span><span class="s4">&amp;gt; </span><span class="s1">Texture or None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: blit</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`For compatibility purposes. Textures created by different Renderers cannot be shared!`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`blit(source, dest, area=None, special_flags=0)-</span><span class="s4">&amp;gt; </span><span class="s1">Rect`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: draw_line</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Draws a line.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`draw_line(p1, p2) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: draw_point</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Draws a point.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`draw_point(point) -</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: draw_rect</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Draws a rectangle.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`draw_rect(rect)-</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: fill_rect</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Fills a rectangle.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`fill_rect(rect)-</span><span class="s4">&amp;gt; </span><span class="s1">None`</span><span class="s0">&lt;/span&gt;</span>
+
+   <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">.. method:: to_surface</span><span class="s0">&lt;/span&gt;</span>
+
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sl:`Read pixels from current render target and create a pygame.Surface. WARNING: Slow operation, use sparingly.`</span><span class="s0">&lt;/span&gt;</span>
+      <span class="s0">&lt;span </span><span class="s2">class</span><span class="s3">=&quot;s0&quot;</span><span class="s0">&gt;</span><span class="s1">| :sg:`to_surface(surface=None, area=None)-</span><span class="s4">&amp;gt; </span><span class="s1">Surface`</span><span class="s0">&lt;/span&gt;&lt;/pre&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>

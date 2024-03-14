@@ -1,0 +1,105 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/custom.css">    
+</head>
+<div class="topnav">
+    <a href="/index">Home</a>
+    <a href="/search">Search</a>
+    <a href="/history">History</a>
+    <a href="/Forecast">Forecast</a>
+    <li style="float:right"><a class="active" href="/register">Register</a></li>
+</div>
+
+
+        <h1>Enter a location to view current Weather:</h1>
+    <div class="content">
+        <script>
+            function getweather() {
+                var city = document.getElementById("search").value;
+                var units = "f";
+                fetch("http://api.weatherstack.com/current?access_key=027d422b684973798b66b13c626b937e&query=" + city + "&units=" + units)
+                    //DONT PUT SEMICOLON HERE
+                    .then(a => a.json()) //DONT PUT SEMI--COLON HERE EITHER
+                    .then(response => {
+                        document.getElementById("image").src = response.current.weather_icons[0];
+                        document.getElementById("output").innerHTML = "<h1>" + 
+ 						response.current.weather_descriptions[0] + "<h1> Weather information for " + 
+						response.location.name + "</h1>Temperature:" + 
+						response.current.temperature + "<br>Feels Like " + 
+						response.current.feelslike + "<br> UV Index: " + 
+						response.current.uv_index + "<br>Humidity: " + 
+						response.current.humidity + "<br>Cloud Cover: " + 
+						response.current.cloudcover + "</h1>";
+                    });
+            }
+        </script>
+        <h1>Search by City/State/Zip</h1>
+        <input placeholder="City/State/Zip" id="search" />
+        <button onclick="getweather()">Search</button><br><br>
+        <img id="image" style="border-radius:2px;" />
+
+        <div display="block" id="output"><h1></h2></div>
+    </div>
+	
+   
+</body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/custom.css">    
+</head>
+<div class="topnav">
+    <a href="/index">Home</a>
+    <a href="/search">Search</a>
+    <a href="/history">History</a>
+    <a href="/Forecast">Forecast</a>
+    <li style="float:right"><a class="active" href="/register">Register</a></li>
+</div>
+
+
+        <h1>Enter a location to view current Weather:</h1>
+    <div class="content">
+        <script>
+            function getweather() {
+                var city = document.getElementById("search").value;
+                var units = "f";
+                fetch("http://api.weatherstack.com/current?access_key=027d422b684973798b66b13c626b937e&query=" + city + "&units=" + units)
+                    //DONT PUT SEMICOLON HERE
+                    .then(a => a.json()) //DONT PUT SEMI--COLON HERE EITHER
+                    .then(response => {
+                        document.getElementById("image").src = response.current.weather_icons[0];
+                        document.getElementById("output").innerHTML = "<h1>" + 
+ 						response.current.weather_descriptions[0] + "<h1> Weather information for " + 
+						response.location.name + "</h1>Temperature:" + 
+						response.current.temperature + "<br>Feels Like " + 
+						response.current.feelslike + "<br> UV Index: " + 
+						response.current.uv_index + "<br>Humidity: " + 
+						response.current.humidity + "<br>Cloud Cover: " + 
+						response.current.cloudcover + "</h1>";
+                    });
+            }
+        </script>
+        <h1>Search by City/State/Zip</h1>
+        <input placeholder="City/State/Zip" id="search" />
+        <button onclick="getweather()">Search</button><br><br>
+        <img id="image" style="border-radius:2px;" />
+
+        <div display="block" id="output"><h1></h2></div>
+    </div>
+	
+   
+</body>
+</html>
+>>>>>>> refs/remotes/origin/main
